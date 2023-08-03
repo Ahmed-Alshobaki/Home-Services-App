@@ -8,7 +8,11 @@ class ManagerColors {
   static Color brown200 = Colors.brown.shade300;
   static Color transparent = Colors.transparent;
   static Color white70 = Colors.white70;
-  static Color white = Colors.white;
-  static Color black = Colors.black;
+  static const Color white = Colors.white;
+
   static Color green = const Color(0xff5FD068);
+  static const Color yellow = const Color(0xffF3CA48);
+  static const Color black =  Color(0xff000000);
+  static const Color black80 =  Color(0x80000000);
+
 }

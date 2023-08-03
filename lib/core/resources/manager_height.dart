@@ -7,8 +7,12 @@ class ManagerHeights {
   static const double h12 = 12;
   static const double h40 = 40;
   static const double h60 = 60;
+  static const double h50 = 50;
   static const double h80 = 80;
   static const double h100 = 100;
   static const double h150 = 150;
   static const double h200 = 200;
+  static const double h360 = 360;
+
+
 }

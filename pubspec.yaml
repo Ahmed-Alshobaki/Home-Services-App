@@ -64,6 +64,7 @@ dependencies:
   google_sign_in: ^6.1.4
   responsive_builder: ^0.7.0
   image_pickers: ^2.0.4+1
+  introduction_screen: ^3.1.11
 
 dev_dependencies:
   flutter_test:
@@ -90,6 +91,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/splash/
+   - assets/onboarding/
+   - assets/onboarding2/
+   - assets/onboarding3/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -103,10 +107,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+     - family: quicksand
+       fonts:
+         - asset: font/static/Quicksand-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

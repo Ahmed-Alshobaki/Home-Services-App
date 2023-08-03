@@ -20,7 +20,7 @@ class Splash extends StatelessWidget {
             Align(
               alignment: AlignmentDirectional.center,
                 child: Image.asset(
-              ManagerAssets.group,
+              ManagerAssets.group_splash,
               filterQuality: FilterQuality.high,
             ))
           ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_routes.dart';
 
+import 'view/Auth/login/Login.dart';
 import 'view/welcome page/onboarding1/onboarding1.dart';
 import 'view/welcome page/splash/splash.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: ManagerRoutes.splash, page: ()=> Splash()),
         GetPage(name: ManagerRoutes.onboarding1, page: ()=> const OnBoarding1()),
+        GetPage(name: ManagerRoutes.Login, page: ()=> const  Login()),
       ],
 
 
