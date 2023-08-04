@@ -9,6 +9,7 @@ import '../../../controlle/OnBoarding/OnBoarding.dart';
 import '../../../core/resources/manager_colors.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import '../../../core/resources/manager_fonts.dart';
+import '../../widget/Buttom/Buttomprimary.dart';
 
 // class  extends StatelessWidget {
 //   const ({super.key});
@@ -52,21 +53,27 @@ class OnBoarding1 extends StatelessWidget {
             ),
           ),
           //SizedBox(height: 40,),
-          Container(
-              margin: const EdgeInsetsDirectional.only(bottom: 20),
-              child: MaterialButton(
-                color: ManagerColors.green,
-                height: ManagerHeights.h50,
-                minWidth: ManagerHeights.h360,
-                onPressed: () {
-                  OnBoarding1.introKey.currentState?.next();
-                  int? a =OnBoarding1.introKey.currentState?.getCurrentPage();
-                  OnBoarding1.Done(a);
-                },
-                child: const Text(ManagerStrings.Next),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(ManagerFontSizes.s15)),
-              ))
+          // Container(
+          //     margin: const EdgeInsetsDirectional.only(bottom: 20),
+          //     child: MaterialButton(
+          //       color: ManagerColors.green,
+          //       height: ManagerHeights.h50,
+          //       minWidth: ManagerHeights.h360,
+          //       onPressed: () {
+          //         OnBoarding1.introKey.currentState?.next();
+          //         int? a =OnBoarding1.introKey.currentState?.getCurrentPage();
+          //         OnBoarding1.Done(a);
+          //       },
+          //       child: const Text(ManagerStrings.Next),
+          //       shape: RoundedRectangleBorder(
+          //           borderRadius: BorderRadius.circular(ManagerFontSizes.s15)),
+          //     )),
+          ButtomPrimary(gata: (){
+            OnBoarding1.introKey.currentState?.next();
+            int? a =OnBoarding1.introKey.currentState?.getCurrentPage();
+            OnBoarding1.Done(a);
+          },),
+
         ],
       ),
     ));

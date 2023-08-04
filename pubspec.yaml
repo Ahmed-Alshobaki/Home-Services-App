@@ -91,9 +91,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/splash/
-   - assets/onboarding/
-   - assets/onboarding2/
-   - assets/onboarding3/
+   - assets/onboarding/onboarding1/
+   - assets/onboarding/onboarding2/
+   - assets/onboarding/onboarding3/
+   - assets/LanguageApp/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
