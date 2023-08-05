@@ -1,7 +1,7 @@
 class ManagerStrings {
   static const String appName = 'Shop App';
   static const String aboutScreen = 'About Screen';
-  static const String EasyProcess1 = "Easy Process";
+  static const String EasyProcess = "Easy Process";
   static const String sube2 =
       " Find all your house needs in one place.  We provide every service to make your home experience smooth.";
   static const String ExpertPeople = " Expert People";
@@ -17,6 +17,8 @@ class ManagerStrings {
   static const String selectlanguage = "Select Language";
   static const String English = "English";
   static const String Arabic = "Arabic";
-
+  static const String  Bycreatinganaccountyouagreetoour = "By creating an account, you agree to our";
+  static const String  Term_and_Conditions = "Term and Conditions";
+  static const String  Skip = "Skip";
 
 }

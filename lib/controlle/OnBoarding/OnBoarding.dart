@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shop/core/resources/manager_routes.dart';
 
+import '../../Localizations/welcome page/onboarding1/onboarding.dart';
 import '../../core/resources/manager_assets.dart';
 import '../../core/resources/manager_colors.dart';
 import '../../core/resources/manager_font_sizes.dart';
@@ -10,7 +11,10 @@ import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
 
 class OnBoarding extends GetxController{
+
+  Translations1 Translationsz1= Get.put(Translations1());
   List<PageViewModel> getpages() {
+    String lang1= Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return [
       PageViewModel(
         decoration: PageDecoration(imageFlex: 2),
@@ -23,20 +27,24 @@ class OnBoarding extends GetxController{
             ],
           ),
         ),
-        titleWidget: const Text((ManagerStrings.EasyProcess1),
-            style: TextStyle(
+        titleWidget:  Text((ManagerStrings.EasyProcess.tr),
+            style:  TextStyle(
                 color: ManagerColors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: ManagerFontSizes.s34,
-                fontFamily: ManagerFont.quicksand)),
+                fontFamily:Translationsz1.getlang(lang1),
+
+            )
+        ),
+          // ManagerFont.quicksand
         bodyWidget: Container(
             height: 80,
             width: 301,
             child: Text(
-              ManagerStrings.sube2,
+              ManagerStrings.sube2.tr,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: ManagerFont.quicksand,
+                  fontFamily: Translationsz1.getlang(lang1),
                   fontWeight: FontWeight.w500,
                   color: ManagerColors.black80,
                   fontSize: 15),
@@ -53,20 +61,20 @@ class OnBoarding extends GetxController{
             ],
           ),
         ),
-        titleWidget: const Text((ManagerStrings.ExpertPeople),
-            style: TextStyle(
+        titleWidget:  Text((ManagerStrings.ExpertPeople.tr),
+            style:  TextStyle(
                 color: ManagerColors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: ManagerFontSizes.s34,
-                fontFamily: ManagerFont.quicksand)),
+                fontFamily: Translationsz1.getlang(lang1))),
         bodyWidget: Container(
             height: 80,
             width: 301,
-            child: const Text(
-              ManagerStrings.ExpertPeoplesub,
+            child:  Text(
+              ManagerStrings.ExpertPeoplesub.tr,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontFamily: ManagerFont.quicksand,
+              style:  TextStyle(
+                  fontFamily: Translationsz1.getlang(lang1),
                   fontWeight: FontWeight.w500,
                   color: ManagerColors.black80,
                   fontSize: 15),
@@ -114,7 +122,7 @@ class OnBoarding extends GetxController{
   }
   void Done(int? a){
     if(introKey.currentState?.getCurrentPage()==2){
-      Get.offNamed(ManagerRoutes.Login);
+      Get.offNamed(ManagerRoutes.LanguageApp);
 
     }
   }

@@ -5,6 +5,7 @@ import '../../../controlle/Language/Languagecontrolle.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_fonts.dart';
+import '../../../core/resources/manager_routes.dart';
 import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
 
@@ -16,7 +17,7 @@ class LanguageApp extends StatelessWidget {
     LanguageControlle controlle = Get.put(LanguageControlle());
     return Scaffold(
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 100, horizontal: 16),
+        padding: EdgeInsetsDirectional.symmetric(vertical: 75, horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,44 +55,9 @@ class LanguageApp extends StatelessWidget {
                       fontFamily: ManagerFont.quicksand)),
             ),
             Container(
-              margin: EdgeInsetsDirectional.only(top: 10),
+              margin: const EdgeInsetsDirectional.only(top: 10),
               child: ListTile(
-                leading: Text((ManagerStrings.English),
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                        color: ManagerColors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: ManagerFontSizes.s18,
-                        fontFamily: ManagerFont.quicksand)),
-                trailing: GetBuilder<LanguageControlle>(
-                  init: LanguageControlle(),
-                  builder: (controller) =>Radio(value: "1", groupValue: controlle.language, onChanged: (val){
-                    controlle.Equals(val!);
-
-                  })
-                ),
-              ),
-              // Container(child: ListTile(
-              //   leading:  Text((ManagerStrings.English),
-              //       textAlign: TextAlign.left,
-              //       style: TextStyle(
-              //           color: ManagerColors.black,
-              //           fontWeight: FontWeight.bold,
-              //           fontSize: ManagerFontSizes.s18,
-              //           fontFamily: ManagerFont.quicksand)),
-              //   trailing: Radio(value: " ", onChanged: (vale1) {
-              //     language = vale1!;
-              //   }, groupValue: language),
-              //
-              // ),)
-            ),
-            Divider(
-             indent:16 ,
-              endIndent:16 ,
-            ),
-            Container(
-              child: ListTile(
-                leading: Text((ManagerStrings.Arabic),
+                leading: const Text((ManagerStrings.English),
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: ManagerColors.black,
@@ -100,11 +66,15 @@ class LanguageApp extends StatelessWidget {
                         fontFamily: ManagerFont.quicksand)),
                 trailing: GetBuilder<LanguageControlle>(
                     init: LanguageControlle(),
-                    builder: (controller) =>Radio(value: "2", groupValue: controlle.language, onChanged: (val){
-                      controlle.Equals(val!);
-
-                    })
-                ),
+                    builder: (controller) => Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                        activeColor: ManagerColors.primaryColor,
+                        value: "1",
+                        groupValue: controlle.language,
+                        onChanged: (val) {
+                          controlle.Equals(val!);
+                          controlle.change("en");
+                        })),
               ),
               // Container(child: ListTile(
               //   leading:  Text((ManagerStrings.English),
@@ -120,11 +90,60 @@ class LanguageApp extends StatelessWidget {
               //
               // ),)
             ),
-            Divider(
-              indent:16 ,
-              endIndent:16 ,
+            const Divider(
+              indent: 16,
+              endIndent: 16,
             ),
-            ButtomPrimary(),
+            Container(
+              child: ListTile(
+                leading: const Text((ManagerStrings.Arabic),
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: ManagerColors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: ManagerFontSizes.s18,
+                        fontFamily: ManagerFont.quicksand)),
+                trailing: GetBuilder<LanguageControlle>(
+                    init: LanguageControlle(),
+                    builder: (controller) => Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.green),
+                        activeColor: ManagerColors.primaryColor,
+                        value: "2",
+                        groupValue: controlle.language,
+                        onChanged: (val) {
+                          controlle.Equals(val!);
+                          controlle.change("ar");
+                        })),
+              ),
+            ),
+            const Divider(
+              indent: 16,
+              endIndent: 16,
+            ),
+            Container(
+              margin: EdgeInsetsDirectional.only(start: 21,top: 25),
+              child: const Text((ManagerStrings.Bycreatinganaccountyouagreetoour),
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: ManagerColors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: ManagerFontSizes.s15,
+                      fontFamily: ManagerFont.quicksandRegular)),
+            ),
+            Container(
+              margin: EdgeInsetsDirectional.only(start: 20),
+              child: Text((ManagerStrings.Term_and_Conditions),
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+
+                      color: ManagerColors.green,
+                      fontWeight: FontWeight.w700,
+                      fontSize: ManagerFontSizes.s15,
+                      fontFamily: ManagerFont.din)),
+            ),
+            ButtomPrimary(mtop: 36.0,gata: (){
+              Get.offNamed(ManagerRoutes.Login);
+            },),
           ],
         ),
       ),
