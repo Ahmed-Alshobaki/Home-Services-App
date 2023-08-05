@@ -38,7 +38,7 @@ class OnBoarding extends GetxController{
         ),
           // ManagerFont.quicksand
         bodyWidget: Container(
-            height: 80,
+            height: 60,
             width: 301,
             child: Text(
               ManagerStrings.sube2.tr,
@@ -47,7 +47,7 @@ class OnBoarding extends GetxController{
                   fontFamily: Translationsz1.getlang(lang1),
                   fontWeight: FontWeight.w500,
                   color: ManagerColors.black80,
-                  fontSize: 15),
+                  fontSize: ManagerFontSizes.s15),
             )),
       ),
       PageViewModel(
@@ -77,7 +77,7 @@ class OnBoarding extends GetxController{
                   fontFamily: Translationsz1.getlang(lang1),
                   fontWeight: FontWeight.w500,
                   color: ManagerColors.black80,
-                  fontSize: 15),
+                  fontSize: ManagerFontSizes.s15),
             )),
       ),
 
@@ -95,23 +95,25 @@ class OnBoarding extends GetxController{
             ],
           ),
         ),
-        titleWidget: const Text((ManagerStrings.AllInOnePlace),
-            style: TextStyle(
+        titleWidget:  Text((ManagerStrings.AllInOnePlace.tr),
+            style:  TextStyle(
                 color: ManagerColors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: ManagerFontSizes.s34,
-                fontFamily: ManagerFont.quicksand)),
+                fontFamily: Translationsz1.getlang(lang1)
+            )
+        ),
         bodyWidget: Container(
             height: 60,
             width: 292,
-            child: const Text(
-              ManagerStrings.AllInOnePlacesub,
+            child:  Text(
+              ManagerStrings.AllInOnePlacesub.tr,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontFamily: ManagerFont.quicksand,
+              style:  TextStyle(
+                  fontFamily: Translationsz1.getlang(lang1),
                   fontWeight: FontWeight.w500,
                   color: ManagerColors.black80,
-                  fontSize: 15),
+                  fontSize: ManagerFontSizes.s15),
             )),
       ),
     ];
@@ -122,7 +124,7 @@ class OnBoarding extends GetxController{
   }
   void Done(int? a){
     if(introKey.currentState?.getCurrentPage()==2){
-      Get.offNamed(ManagerRoutes.LanguageApp);
+      Get.offNamed(ManagerRoutes.Login);
 
     }
   }

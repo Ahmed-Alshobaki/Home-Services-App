@@ -13,7 +13,7 @@ class ManagerStrings {
       "We have all the household servicesy ou need on a daily basis with easy access";
   static const String Next = "Next";
 
-  static const String Findyourhomeservic = "Find Your   Home Service";
+  static const String Findyourhomeservic = "Find Your            Home Service";
   static const String selectlanguage = "Select Language";
   static const String English = "English";
   static const String Arabic = "Arabic";
