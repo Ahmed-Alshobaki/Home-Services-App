@@ -23,6 +23,9 @@ class Translations1 implements Translations{
       ManagerStrings.Arabic : "العربية",
       ManagerStrings.Bycreatinganaccountyouagreetoour : "بتسجيلك هنا فانت توافق علي ",
       ManagerStrings.Term_and_Conditions : "الشروط والاحكام",
+      ManagerStrings.Login : "تسجيل الدخول",
+      ManagerStrings.Email : "الايميل",
+      ManagerStrings.Password : "رقم المرور",
     },
     "en" : {
       ManagerStrings.EasyProcess  : "EasyProcess",
@@ -38,6 +41,10 @@ class Translations1 implements Translations{
       ManagerStrings.Arabic : ManagerStrings.Arabic,
       ManagerStrings.Bycreatinganaccountyouagreetoour : ManagerStrings.Bycreatinganaccountyouagreetoour,
       ManagerStrings.Term_and_Conditions : ManagerStrings.Term_and_Conditions,
+      ManagerStrings.Login : ManagerStrings.Login,
+      ManagerStrings.Email : ManagerStrings.Email,
+      ManagerStrings. Password : ManagerStrings.Password,
+
     }
   };
 

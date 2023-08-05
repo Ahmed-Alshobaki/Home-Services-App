@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GetMaterialApp(
-     initialRoute: ManagerRoutes.splash,
+    // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     // home: LanguageApp(),
+      home: Login(),
       theme: ThemeData(
         unselectedWidgetColor: Colors.red,
         disabledColor: Colors.blue,

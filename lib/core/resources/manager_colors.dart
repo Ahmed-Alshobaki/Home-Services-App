@@ -15,6 +15,6 @@ class ManagerColors {
   static const Color black =  Color(0xff000000);
   static const Color black80 =  Color(0x80000000);
   static const Color black95=  Color(0x95000000);
-
+  static Color greenfath = const Color(0xffF9FFF6);
 
 }

@@ -20,5 +20,11 @@ class ManagerStrings {
   static const String  Bycreatinganaccountyouagreetoour = "By creating an account, you agree to our";
   static const String  Term_and_Conditions = "Term and Conditions";
   static const String  Skip = "Skip";
+  static const String  Login = "Login";
+  static const String  Phone_and_password = " Please Enter your Phone and password to continue";
 
+  static const String  Email = "Email";
+  static const String  Password = "Password";
+  static const String  EnterYourEmail =  "Enter Your Email";
+  static const String  EnterYourPassword=  "Enter Your Password";
 }

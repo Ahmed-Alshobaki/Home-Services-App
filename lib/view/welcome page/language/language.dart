@@ -148,17 +148,16 @@ class LanguageApp extends StatelessWidget {
 
                            });
                      },),
-                      Container(
+                      Text(
+                          (ManagerStrings.Bycreatinganaccountyouagreetoour.tr),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: ManagerColors.black80,
+                              fontSize: ManagerFontSizes.s15,
+                              fontFamily:  ManagerFont.din)),
 
-                        child: Text(
-                            (ManagerStrings.Bycreatinganaccountyouagreetoour.tr),
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w500,
-                                color: ManagerColors.black80,
-                                fontSize: ManagerFontSizes.s15,
-                                fontFamily:  ManagerFont.din)),
-                      ),
                     ],
+
                   ),
                 ),
                 Container(
