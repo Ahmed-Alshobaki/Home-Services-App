@@ -43,7 +43,7 @@ class OnBoarding1 extends StatelessWidget {
             alignment: AlignmentDirectional.topEnd,
             child: InkWell(
               onTap: (){
-                Get.offNamed(ManagerRoutes.LanguageApp);
+                Get.offNamed(ManagerRoutes.Login);
               },
                 child:  Text(
               ManagerStrings.Skip.tr,
@@ -70,6 +70,7 @@ class OnBoarding1 extends StatelessWidget {
             ),
           ),
           ButtomPrimary(
+            tital: ManagerStrings.Next.tr,
             bottom: 36.0,
             gata: () {
               OnBoarding1.introKey.currentState?.next();

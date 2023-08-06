@@ -13,9 +13,10 @@ class ButtomPrimary extends StatelessWidget {
   var gata;
   late double ?mtop ;
  late  double? bottom ;
+    String tital ;
   String lang= Translationsz.getlanguage(Get.deviceLocale!.languageCode);
 
-   ButtomPrimary({ this.gata()?,this.mtop,this.bottom});
+   ButtomPrimary({ this.gata()?,this.mtop,this.bottom,required this.tital});
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +32,8 @@ class ButtomPrimary extends StatelessWidget {
             gata();
           },
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(ManagerFontSizes.s15)),
-          child:  Text(ManagerStrings.Next.tr,style: TextStyle(fontFamily:Translationsz.getlang(lang),color: ManagerColors.white,fontSize: ManagerFontSizes.s18),),
+              borderRadius: BorderRadius.circular(10)),
+          child:  Text(tital.tr,style: TextStyle(fontFamily:Translationsz.getlang(lang),color: ManagerColors.white,fontSize: ManagerFontSizes.s18),),
         ));
   }
 }

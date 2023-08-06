@@ -4,6 +4,7 @@ import 'package:shop/core/resources/manager_assets.dart';
 
 import '../../../Localizations/welcome page/onboarding1/onboarding.dart';
 import '../../../controlle/Login/Login.dart';
+import '../../../controlle/singup/singup.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_fonts.dart';
@@ -11,9 +12,9 @@ import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
 import '../../widget/TextFormField/TextFormFieldcustom.dart';
 
-class Login extends StatelessWidget {
-   Login({super.key});
-  LoginController LoginControlle = Get.put(LoginController());
+class SingUp extends StatelessWidget {
+  SingUp({super.key});
+  SingUpController SingUpControllerr = Get.put(SingUpController());
   @override
   Widget build(BuildContext context) {
 
@@ -21,12 +22,12 @@ class Login extends StatelessWidget {
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 60, horizontal: 20),
+        padding: EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
         child: ListView(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
-            Text((ManagerStrings.Login.tr),
+            Text((ManagerStrings.Register.tr),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -50,7 +51,16 @@ class Login extends StatelessWidget {
                   )),
             ),
             const SizedBox(
-              height: 60,
+              height: 35,
+            ),
+            TextFormFieldcustom(
+              tital: ManagerStrings.FullName,
+              hint: ManagerStrings.EnterYourFullName.tr,
+              Iconn: Icon(Icons.person_outline),
+              obscureText: false,
+            ),
+            const SizedBox(
+              height: 20,
             ),
             TextFormFieldcustom(
               tital: ManagerStrings.Email,
@@ -59,13 +69,13 @@ class Login extends StatelessWidget {
               obscureText: false,
             ),
             const SizedBox(
-              height: 35,
+              height: 20,
             ),
             GetBuilder<LoginController>(
               init: LoginController(),
               builder: (controller) {
                 return TextFormFieldcustom(
-                  obscureText: LoginControlle.obscureText,
+                  obscureText: SingUpControllerr.obscureText,
                   tital: ManagerStrings.Password,
                   hint: ManagerStrings.EnterYourPassword.tr,
                   Iconn: IconButton(
@@ -92,17 +102,19 @@ class Login extends StatelessWidget {
               height: 40,
             ),
             ButtomPrimary(
+              mtop: 5,
+              bottom: 5,
               tital: ManagerStrings.Login,
             ),
             Container(
-                margin: const EdgeInsetsDirectional.only(top: 20),
+                margin: const EdgeInsetsDirectional.only(top: 15),
                 child: Text(
                   ManagerStrings.OR.tr,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontFamily: ManagerFont.quicksand),
                 )),
             const SizedBox(
-              height: 18,
+              height: 13,
             ),
             Container(
               height: 64,
@@ -176,7 +188,7 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  ManagerStrings.Dont_Have_Account.tr,
+                  ManagerStrings.Have_Account.tr,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                       fontFamily: ManagerFont.SemiBold,
@@ -184,7 +196,7 @@ class Login extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    LoginControlle.gotoAingup();
+                    SingUpControllerr.gotoAingup();
                   },
                   child: Text(
                     ManagerStrings.SignUp.tr,

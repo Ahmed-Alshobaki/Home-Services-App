@@ -178,6 +178,7 @@ class LanguageApp extends StatelessWidget {
               init:LanguageControlle() ,
               builder: ( controller) {
               return ButtomPrimary(
+                tital: ManagerStrings.Next.tr,
                 mtop: 45,
                 gata: () {
                   if(controller.Checkboxbool){

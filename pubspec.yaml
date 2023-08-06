@@ -94,6 +94,7 @@ flutter:
     - assets/onboarding/onboarding1/
     - assets/onboarding/onboarding2/
     - assets/onboarding/onboarding3/
+    - assets/login/
     - assets/LanguageApp/
 
 
@@ -115,9 +116,9 @@ flutter:
     - family: quicksandRegular
       fonts:
         - asset: font/static/Quicksand-Regular.ttf
-    - family: QuicksandMediumttf
+    - family: SemiBold
       fonts:
-        - asset: font/static/Quicksand-Medium.ttf
+        - asset: font/static/Quicksand-SemiBold.ttf
     - family: din
       fonts:
         - asset: font/fontArbic/din-next-lt-w23-regular.ttf
