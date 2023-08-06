@@ -65,6 +65,8 @@ dependencies:
   responsive_builder: ^0.7.0
   image_pickers: ^2.0.4+1
   introduction_screen: ^3.1.11
+  flutter_otp_text_field: ^1.1.0+2
+  pinput: ^3.0.0
 
 dev_dependencies:
   flutter_test:

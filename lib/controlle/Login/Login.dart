@@ -19,6 +19,9 @@ class LoginController extends GetxController{
   void gotoAingup(){
     Get.toNamed(ManagerRoutes.SingUp);
   }
+  void gotoForgetPasswordpage(){
+    Get.toNamed(ManagerRoutes.ForgetPassword);
+  }
 
 
 

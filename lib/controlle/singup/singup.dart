@@ -19,6 +19,11 @@ class SingUpController extends GetxController{
   }
   void gotoAingup(){
     Get.toNamed(ManagerRoutes.Login);
+    update();
+  }
+  void gotoForgetPasswordpage(){
+    Get.toNamed(ManagerRoutes.ForgetPassword);
+    update();
   }
 
 }
