@@ -12,11 +12,12 @@ import '../../widget/Buttom/Buttomprimary.dart';
 import '../../widget/TextFormField/TextFormFieldcustom.dart';
 
 class Login extends StatelessWidget {
-   Login({super.key});
+  Login({super.key});
+
   LoginController LoginControlle = Get.put(LoginController());
+
   @override
   Widget build(BuildContext context) {
-
     Translations1 Translationsz1 = Get.put(Translations1());
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
@@ -81,12 +82,17 @@ class Login extends StatelessWidget {
             ),
             Container(
                 margin: EdgeInsetsDirectional.only(top: 15),
-                child: Text(
-                  ManagerStrings.Forget.tr,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontSize: ManagerFontSizes.s15,
-                      fontFamily: Translationsz1.getlang(lang1)),
+                child: InkWell(
+                  onTap: (){
+                    LoginControlle.gotoForgetPasswordpage();
+                  },
+                  child: Text(
+                    ManagerStrings.Forget.tr,
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontSize: ManagerFontSizes.s15,
+                        fontFamily: Translationsz1.getlang(lang1)),
+                  ),
                 )),
             const SizedBox(
               height: 40,
@@ -129,7 +135,6 @@ class Login extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: Translationsz1.getlang(lang1),
-
                         fontSize: ManagerFontSizes.s19),
                   )
                 ],
@@ -163,7 +168,6 @@ class Login extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: Translationsz1.getlang(lang1),
-
                         fontSize: ManagerFontSizes.s19),
                   ),
                 ],

@@ -89,15 +89,23 @@ class SingUp extends StatelessWidget {
                 );
               },
             ),
-            Container(
-                margin: EdgeInsetsDirectional.only(top: 15),
-                child: Text(
-                  ManagerStrings.Forget.tr,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontSize: ManagerFontSizes.s15,
-                      fontFamily: Translationsz1.getlang(lang1)),
-                )),
+            GetBuilder<SingUpController>(
+              init: SingUpController(), builder: ( controller) {
+              return Container(
+                  margin: EdgeInsetsDirectional.only(top: 15),
+                  child: InkWell(
+                    onTap: (){
+                      SingUpControllerr.gotoForgetPasswordpage();
+                    },
+                    child: Text(
+                      ManagerStrings.Forget.tr,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          fontSize: ManagerFontSizes.s15,
+                          fontFamily: Translationsz1.getlang(lang1)),
+                    ),
+                  ));
+            },),
             const SizedBox(
               height: 40,
             ),
@@ -194,18 +202,22 @@ class SingUp extends StatelessWidget {
                       fontFamily: ManagerFont.SemiBold,
                       fontSize: ManagerFontSizes.s16),
                 ),
-                InkWell(
-                  onTap: () {
-                    SingUpControllerr.gotoAingup();
-                  },
-                  child: Text(
-                    ManagerStrings.SignUp.tr,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontFamily: Translationsz1.getlang(lang1),
-                        fontSize: ManagerFontSizes.s16),
-                  ),
-                ),
+               GetBuilder<SingUpController>(
+                 init: SingUpController(),
+                 builder: ( controller) {
+                 return  InkWell(
+                   onTap: () {
+                     SingUpControllerr.gotoAingup();
+                   },
+                   child: Text(
+                     ManagerStrings.SignUp.tr,
+                     textAlign: TextAlign.center,
+                     style: TextStyle(
+                         fontFamily: Translationsz1.getlang(lang1),
+                         fontSize: ManagerFontSizes.s16),
+                   ),
+                 );
+               },)
               ],
             )
           ],

@@ -21,13 +21,14 @@ class ButtomPrimary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       alignment: AlignmentDirectional.center,
 
         margin:  EdgeInsetsDirectional.only(top: mtop??0.0,bottom: bottom??0.0),
         child: MaterialButton(
           color: ManagerColors.green,
           height: ManagerHeights.h50,
-          minWidth: ManagerHeights.h360,
+          minWidth: double.infinity,
           onPressed: () {
             gata();
           },

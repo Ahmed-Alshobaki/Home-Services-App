@@ -28,6 +28,7 @@ class ManagerStrings {
   static const String  EnterYourEmail =  "Enter Your Email";
   static const String  EnterYourPassword=  "Enter Your Password";
   static const String  Forget=  "Forget Password ?";
+
   static const String  OR=  "OR";
   static const String  Facebook=  "Facebook";
   static const String  Google=  "Google";
@@ -38,5 +39,8 @@ class ManagerStrings {
   static const String  EnterYourFullName=  "Enter Your FullName";
   static const String  Have_Account =  "Have Account ? ";
   static const String  Sign_in =  "Sign in ";
+  static const String  Forget2=  "Forget Password";
+  static const String  Enter_your_Phone_Number_to_reset_password=  "Enter your Phone Number to reset password.";
+  static const String  Reset_Password=  "Reset Password";
 
 }
