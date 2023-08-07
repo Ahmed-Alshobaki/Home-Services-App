@@ -13,7 +13,7 @@ class ManagerStrings {
       "We have all the household servicesy ou need on a daily basis with easy access";
   static const String Next = "Next";
 
-  static const String Findyourhomeservic = "Find Your            Home Service";
+  static const String Findyourhomeservic = "Find Your Home Service";
   static const String selectlanguage = "Select Language";
   static const String English = "English";
   static const String Arabic = "Arabic";
@@ -45,5 +45,13 @@ class ManagerStrings {
   static const String  Otp=  "Otp";
   static const String  Otptital=  "An Authentecation code has been sent to ahmedzon0598596843@gmail.com";
   static const String  Submit=  "Submit";
+  static const String  Create_new_password=  "Create strong and secured new password.";
+  static const String  Confirm_Password=  "Confirm Password";
+  static const String  Save_Password=  "Save Password";
+  static const String  notvalidUsername=  "not valid username";
+  static const String  notvalidemail=  "not valid email";
+  static const String  notvalidphono=  "not valid phono";
+  static const String  characters6=  "A password consisting of 6 characters";
+  static const String  empty=  "The text can't be empty";
 
 }

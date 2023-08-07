@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_assets.dart';
 
-import '../../../Localizations/welcome page/onboarding1/onboarding.dart';
+import '../../../Localizations/welcome page/locale/locale.dart';
+import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../../controlle/Login/Login.dart';
 import '../../../controlle/singup/singup.dart';
+import '../../../core/functions/validator.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_fonts.dart';
@@ -18,7 +20,7 @@ class SingUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    Translations1 Translationsz1 = Get.put(Translations1());
+    Localee Translationsz1 = Get.put(Localee());
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
       body: Container(
@@ -36,7 +38,7 @@ class SingUp extends StatelessWidget {
                   fontFamily: Translationsz1.getlang(lang1),
                 )),
             const SizedBox(
-              height: 25,
+              height: 15,
             ),
             Container(
               height: 55,
@@ -51,9 +53,13 @@ class SingUp extends StatelessWidget {
                   )),
             ),
             const SizedBox(
-              height: 35,
+              height: 25,
             ),
             TextFormFieldcustom(
+              controller: SingUpControllerr.name,
+              validator: (val){
+                return  validator(val!,15,"name");
+              },
               tital: ManagerStrings.FullName,
               hint: ManagerStrings.EnterYourFullName.tr,
               Iconn: Icon(Icons.person_outline),
@@ -63,6 +69,10 @@ class SingUp extends StatelessWidget {
               height: 20,
             ),
             TextFormFieldcustom(
+              controller: SingUpControllerr.email,
+              validator: (val){
+                return   validator(val!,15,"email");
+              },
               tital: ManagerStrings.Email,
               hint: ManagerStrings.EnterYourEmail.tr,
               Iconn: Icon(Icons.email_outlined),
@@ -75,6 +85,10 @@ class SingUp extends StatelessWidget {
               init: LoginController(),
               builder: (controller) {
                 return TextFormFieldcustom(
+                  controller: SingUpControllerr.password,
+                  validator: (val){
+                    return    validator(val!,15,"password");
+                  },
                   obscureText: SingUpControllerr.obscureText,
                   tital: ManagerStrings.Password,
                   hint: ManagerStrings.EnterYourPassword.tr,
@@ -107,15 +121,17 @@ class SingUp extends StatelessWidget {
                   ));
             },),
             const SizedBox(
-              height: 40,
+              height: 30,
             ),
             ButtomPrimary(
-              mtop: 5,
               bottom: 5,
-              tital: ManagerStrings.Login,
+              tital: ManagerStrings.Register.tr,
+              gata: (){
+                SingUpControllerr.gotoVerify();
+              },
             ),
             Container(
-                margin: const EdgeInsetsDirectional.only(top: 15),
+                margin: const EdgeInsetsDirectional.only(top: 10),
                 child: Text(
                   ManagerStrings.OR.tr,
                   textAlign: TextAlign.center,

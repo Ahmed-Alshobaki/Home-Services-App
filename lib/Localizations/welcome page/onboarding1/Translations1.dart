@@ -1,8 +1,10 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_strings.dart';
 
+import '../../../core/constant/apptheme.dart';
 import '../../../core/resources/manager_fonts.dart';
 
 class Translations1 implements Translations {
@@ -10,11 +12,12 @@ class Translations1 implements Translations {
   // TODO: implement keys
   Map<String, Map<String, String>> get keys => {
         "ar": {
+
           ManagerStrings.EasyProcess: "سهولة الوصول",
           ManagerStrings.sube2:
               "ابحث عن كل احتياجات منزلك في مكان واحد. نحن نقدم كل الخدمات لجعل تجربة منزلك سلسة.",
           ManagerStrings.Skip: "تخطي",
-          ManagerStrings.Next: "دخول",
+          ManagerStrings.Next: "التالي",
           ManagerStrings.ExpertPeople: "عمالة مميزة",
           ManagerStrings.ExpertPeoplesub:
               "لدينا أفضل الأفراد في مجالهم يعملون من أجلك فقط. إنهم مدربون جيدًا وقادرون على التعامل مع أي شيء تحتاجه.",
@@ -52,6 +55,14 @@ class Translations1 implements Translations {
           ManagerStrings.Reset_Password: "ارسل",
           ManagerStrings.Otp : "رمز الدخول",
           ManagerStrings.Otptital : "رمز التحقيق تم ارسالة الي الايميل .....",
+          ManagerStrings.Create_new_password : "برجاء ادخال كلمة مرور لتاكيد حسابك",
+          ManagerStrings.Confirm_Password : "تاكيد رقم المرور",
+          ManagerStrings.Submit : "تسجيل",
+          ManagerStrings.notvalidUsername : "اسم مستخدم غير صالح",
+          ManagerStrings.characters6 : "كلمة سر تتكون 6 احروف",
+          ManagerStrings.notvalidemail : "الايميل غير صالح",
+          ManagerStrings.notvalidphono : "رقم غير صالح",
+          ManagerStrings.empty : "لايمكن لنص ان يكون فارغ",
         },
         "en": {
           ManagerStrings.EasyProcess: "EasyProcess",
@@ -92,29 +103,19 @@ class Translations1 implements Translations {
           ManagerStrings.Reset_Password: ManagerStrings.Reset_Password,
           ManagerStrings.Otp : ManagerStrings.Otp,
           ManagerStrings.Otptital : ManagerStrings.Otptital,
+          ManagerStrings.Create_new_password : ManagerStrings.Create_new_password,
+          ManagerStrings.Confirm_Password : ManagerStrings.Confirm_Password,
+          ManagerStrings.Submit : ManagerStrings.Submit,
+          ManagerStrings.notvalidUsername : ManagerStrings.notvalidUsername,
+          ManagerStrings.characters6 : ManagerStrings.characters6,
+          ManagerStrings.notvalidemail : ManagerStrings.notvalidemail,
+          ManagerStrings.notvalidphono : ManagerStrings.notvalidphono,
+          ManagerStrings.empty : ManagerStrings.empty,
+
         }
       };
 
-  String en_US = "en";
-  String ar_JO = "ar";
-  String? long1;
 
-  String getlanguage(String s) {
-    if (s.contains(en_US)) {
-      return "en";
-    } else if (s.contains(ar_JO)) {
-      return "ar";
-    }
-    return "null";
-  }
 
-  String getlang(String lang) {
-    if (lang == "ar" || long1 == "ar") {
-      return ManagerFont.din;
-    } else {
-      return ManagerFont.quicksand;
-    }
-    ;
-    return "null";
-  }
+
 }

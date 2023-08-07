@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop/core/resources/manager_fonts.dart';
 
-import '../../../Localizations/welcome page/onboarding1/onboarding.dart';
+import '../../../Localizations/welcome page/locale/locale.dart';
+import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
+
+import '../../../controlle/verifycodeResetSingup/VerifyCodeController.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
+import '../../widget/Dialog/Dialog.dart';
 import '../../widget/TextFormField/TextFormFieldcustom.dart';
 import '../ForgetPassword/ForgetPassword.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
-Translations1 Translationsz1 = Get.put(Translations1());
+Localee Translationsz1 = Get.put(Localee());
 
-class VerifyCode extends StatelessWidget {
-  VerifyCode({super.key});
-
+class VerifyCodeSingup extends StatelessWidget {
+  VerifyCodeSingup({super.key});
   String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
-
+  VerifyCodeSingUpController controller = Get.put(VerifyCodeSingUpController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +63,7 @@ class VerifyCode extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(bottom: 25, top: 35),
               child: OtpTextField(
                 focusedBorderColor: ManagerColors.green,
+                textStyle: TextStyle(fontSize: ManagerFontSizes.s20,fontFamily: ManagerFont.quicksand),
                 showCursor: true,
                 fieldWidth: 48,
                 numberOfFields: 5,
@@ -81,8 +86,12 @@ class VerifyCode extends StatelessWidget {
               height: 25,
             ),
             ButtomPrimary(
-              tital: ManagerStrings.Reset_Password.tr,
-              gata: () {},
+              tital: ManagerStrings.Submit.tr,
+              gata: () {
+                DialogA.getDialog(context: context,btnOkOnPress: (){
+                  controller.goLogin();
+                });
+              },
             ),
           ],
         ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../Localizations/welcome page/onboarding1/onboarding.dart';
+import '../../../Localizations/welcome page/locale/locale.dart';
+import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../../controlle/Language/Languagecontrolle.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
@@ -18,11 +19,11 @@ class LanguageApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LanguageControlle controlle = Get.put(LanguageControlle());
-    Translations1 Translationsz1 = Get.put(Translations1());
+    Localee Translationsz1 = Get.put(Localee());
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 65, horizontal: 16),
+        padding: EdgeInsetsDirectional.symmetric(vertical: 60, horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,10 +37,11 @@ class LanguageApp extends StatelessWidget {
             Wrap(
               children: [
                 Container(
+                  padding: EdgeInsetsDirectional.symmetric(horizontal: 10),
                   margin: EdgeInsetsDirectional.only(top: 40),
                   child: Text((ManagerStrings.Findyourhomeservic.tr),
                       style: TextStyle(
-                          letterSpacing: 2.0,
+
                           color: ManagerColors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 37,

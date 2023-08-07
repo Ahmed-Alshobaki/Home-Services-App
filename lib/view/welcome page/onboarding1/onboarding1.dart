@@ -6,7 +6,8 @@ import 'package:shop/core/resources/manager_height.dart';
 import 'package:shop/core/resources/manager_routes.dart';
 import 'package:shop/core/resources/manager_strings.dart';
 
-import '../../../Localizations/welcome page/onboarding1/onboarding.dart';
+import '../../../Localizations/welcome page/locale/locale.dart';
+import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../../controlle/OnBoarding/OnBoarding.dart';
 import '../../../core/resources/manager_colors.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -29,7 +30,7 @@ class OnBoarding1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     OnBoarding OnBoarding1 = Get.put(OnBoarding());
-    Translations1 Translationsz = Get.put(Translations1());
+    Localee Translationsz = Get.put(Localee());
     lang= Translationsz.getlanguage(Get.deviceLocale!.languageCode);
     // TODO: implement build
     return Scaffold(

@@ -9,6 +9,8 @@ class ManagerRoutes {
   static const SingUp = "/SingUp";
   static const ForgetPassword = "/ForgetPassword";
   static const VerifyCode = "/VerifyCode";
+  static const ResetPassword = "/ResetPassword";
+  static const VerifyCodeSingup = "/VerifyCodeSingup";
   //
 
 }

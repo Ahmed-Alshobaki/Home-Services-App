@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shop/core/resources/manager_routes.dart';
 
-import '../../Localizations/welcome page/onboarding1/onboarding.dart';
+import '../../Localizations/welcome page/locale/locale.dart';
+import '../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../core/resources/manager_assets.dart';
 import '../../core/resources/manager_colors.dart';
 import '../../core/resources/manager_font_sizes.dart';
@@ -12,7 +13,7 @@ import '../../core/resources/manager_strings.dart';
 
 class OnBoarding extends GetxController{
 
-  Translations1 Translationsz1= Get.put(Translations1());
+  Localee Translationsz1= Get.put(Localee());
   List<PageViewModel> getpages() {
     String lang1= Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return [
