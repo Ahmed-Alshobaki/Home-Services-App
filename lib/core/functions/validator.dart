@@ -8,16 +8,14 @@ validator(String val,min,type){
   }
       if(type=="email"){
         if (!GetUtils.isEmail(type)) {
-          return ManagerStrings.notvalidUsername.tr;
+          return ManagerStrings.notvalidemail.tr;
         }
       }
 
 
-      if (!GetUtils.isPhoneNumber(type)) {
-    return ManagerStrings.notvalidUsername.tr;
-    }
 
-  if (val.length>=6) {
+
+  if (val.length<=6) {
     return ManagerStrings.characters6.tr;
   }
      if (val.isEmpty) {

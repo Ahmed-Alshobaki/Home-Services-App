@@ -32,10 +32,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GetMaterialApp(
-    //  initialRoute: ManagerRoutes.splash,
+     initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     home: Login(),
+   //  home: Login(),
      theme:ThemeData(
         colorScheme: ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
        appBarTheme: AppBarTheme(
