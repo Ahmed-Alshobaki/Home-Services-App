@@ -8,16 +8,10 @@ class LoginController extends GetxController{
   TextEditingController? email ;
   TextEditingController? password ;
 
-  int a =1;
+
   bool obscureText = false;
   void cheng (){
-  if (a%2==0) {
-    obscureText = false;
-    a++;
-  }else if(a%2==1){
-    obscureText = true;
-    a++;
-  }
+    obscureText = obscureText ==true?false :true ;
   update();
   }
   void gotoAingup(){

@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 
 class DialogA {
 
-  static getDialog({required BuildContext context, required void Function()? btnOkOnPress}){
+  static getDialog({required BuildContext context, required void Function()? btnOkOnPress
+  ,required String tital,required DialogType dialogType,void Function()? btnCancelOnPress}){
     return  AwesomeDialog(
       context: context,
-      dialogType: DialogType.success,
+      dialogType:dialogType,
       animType: AnimType.topSlide,
-      title: 'Success Reset',
+        title: tital,
       //  desc: 'Dialog description here.............',
-      btnCancelOnPress: () {},
+      btnCancelOnPress: btnCancelOnPress,
+
       btnOkOnPress: btnOkOnPress,
     ).show();
   }

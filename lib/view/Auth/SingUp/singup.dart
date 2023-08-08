@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_assets.dart';
@@ -6,6 +7,7 @@ import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../../controlle/Login/Login.dart';
 import '../../../controlle/singup/singup.dart';
+import '../../../core/functions/AlertExitApp.dart';
 import '../../../core/functions/validator.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
@@ -23,9 +25,21 @@ class SingUp extends StatelessWidget {
     Localee Translationsz1 = Get.put(Localee());
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
-      body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
+      body: WillPopScope(
+        onWillPop: (){
+          AwesomeDialog(
+              context: context,
+              dialogType: DialogType.info,
+              animType: AnimType.rightSlide,
+            title: 'info',
+            desc: 'Do you want to sign out',
+              btnCancelOnPress: () {},
+          btnOkOnPress: () {},
+          ).show();
+          return Future.value(true);
+        },
         child: ListView(
+          padding: EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
@@ -81,8 +95,8 @@ class SingUp extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            GetBuilder<LoginController>(
-              init: LoginController(),
+            GetBuilder<SingUpController>(
+              init: SingUpController(),
               builder: (controller) {
                 return TextFormFieldcustom(
                   controller: SingUpControllerr.password,

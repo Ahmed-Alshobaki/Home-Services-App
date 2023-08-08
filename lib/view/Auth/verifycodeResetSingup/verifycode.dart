@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_fonts.dart';
@@ -88,9 +89,11 @@ class VerifyCodeSingup extends StatelessWidget {
             ButtomPrimary(
               tital: ManagerStrings.Submit.tr,
               gata: () {
-                DialogA.getDialog(context: context,btnOkOnPress: (){
-                  controller.goLogin();
-                });
+                DialogA.getDialog(
+                    context: context,
+                    btnOkOnPress: () {},
+                    tital: 'Success Reset',
+                    dialogType: DialogType.success);
               },
             ),
           ],
