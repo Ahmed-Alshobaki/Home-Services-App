@@ -6,7 +6,9 @@ import 'package:shop/core/resources/manager_routes.dart';
 
 import 'Localizations/welcome page/locale/locale.dart';
 import 'Localizations/welcome page/onboarding1/Translations1.dart';
+import 'core/constant/Pages.dart';
 import 'core/constant/apptheme.dart';
+import 'core/functions/share.dart';
 import 'view/Auth/ForgetPassword/ForgetPassword.dart';
 import 'view/Auth/ResetPassword/reset_password.dart';
 import 'view/Auth/SingUp/singup.dart';
@@ -19,9 +21,11 @@ import 'view/welcome page/onboarding1/onboarding1.dart';
 import 'view/welcome page/splash/splash.dart';
 
 
-void main() {
-
-  runApp( MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  Share  dd =Get.find();
+  dd.oninit1();
+  runApp(  MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,13 +36,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GetMaterialApp(
-    // initialRoute: ManagerRoutes.splash,
+     initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     home: Login(),
+    // home: Login(),
      theme:ThemeData(
         colorScheme: ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
-       appBarTheme: AppBarTheme(
+       appBarTheme: const AppBarTheme(
          actionsIconTheme: IconThemeData(
          ),
          elevation: 0,
@@ -50,18 +54,7 @@ class MyApp extends StatelessWidget {
      ),
       debugShowCheckedModeBanner: false,
 
-      getPages: [
-        GetPage(name: ManagerRoutes.splash, page: () => Splash()),
-        GetPage(name: ManagerRoutes.onboarding1, page: () => OnBoarding1()),
-        GetPage(name: ManagerRoutes.Login, page: () => Login()),
-        GetPage(name: ManagerRoutes.LanguageApp, page: () => LanguageApp()),
-        GetPage(name: ManagerRoutes.SingUp, page: () => SingUp()),
-        GetPage(name: ManagerRoutes.ForgetPassword, page: () => ForgetPassword()),
-        GetPage(name: ManagerRoutes.VerifyCode, page: () => VerifyCode()),
-        GetPage(name: ManagerRoutes.ResetPassword, page: () => ResetPassword()),
-        GetPage(name: ManagerRoutes.VerifyCodeSingup, page: () => VerifyCodeSingup()),
-
-      ],
+      getPages: Pages.Page,
     );
   }
 }

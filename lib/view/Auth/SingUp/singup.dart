@@ -39,7 +39,8 @@ class SingUp extends StatelessWidget {
           return Future.value(true);
         },
         child: ListView(
-          padding: EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
+
+          padding: EdgeInsetsDirectional.symmetric(vertical: 90, horizontal: 20),
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
@@ -135,10 +136,10 @@ class SingUp extends StatelessWidget {
                   ));
             },),
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
             ButtomPrimary(
-              bottom: 5,
+              bottom: 10,
               tital: ManagerStrings.Register.tr,
               gata: (){
                 SingUpControllerr.gotoVerify();
@@ -152,7 +153,7 @@ class SingUp extends StatelessWidget {
                   style: TextStyle(fontFamily: ManagerFont.quicksand),
                 )),
             const SizedBox(
-              height: 13,
+              height: 15,
             ),
             Container(
               height: 64,
