@@ -27,7 +27,10 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {  }, icon: Icon(Icons.arrow_back),),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back),
+        ),
       ),
       body: Container(
         padding: EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
@@ -62,9 +65,9 @@ class ForgetPassword extends StatelessWidget {
               height: 40,
             ),
             TextFormFieldcustom(
-              controller:Controllerr.email ,
-              validator: (val){
-                validator(val!,6,"email");
+              controller: Controllerr.email,
+              validator: (val) {
+                validator(val!, 6, "email");
               },
               tital: ManagerStrings.Email,
               hint: ManagerStrings.EnterYourEmail.tr,
@@ -76,7 +79,7 @@ class ForgetPassword extends StatelessWidget {
             ),
             ButtomPrimary(
               tital: ManagerStrings.Reset_Password.tr,
-              gata: (){
+              onPressed: () {
                 Controllerr.goVerify();
               },
             ),

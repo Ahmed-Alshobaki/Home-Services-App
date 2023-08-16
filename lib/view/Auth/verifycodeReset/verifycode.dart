@@ -63,7 +63,9 @@ class VerifyCode extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(bottom: 25, top: 35),
               child: OtpTextField(
                 focusedBorderColor: ManagerColors.green,
-                textStyle: TextStyle(fontSize: ManagerFontSizes.s20,fontFamily: ManagerFont.quicksand),
+                textStyle: TextStyle(
+                    fontSize: ManagerFontSizes.s20,
+                    fontFamily: ManagerFont.quicksand),
                 showCursor: true,
                 fieldWidth: 48,
                 numberOfFields: 5,
@@ -71,15 +73,13 @@ class VerifyCode extends StatelessWidget {
                 filled: true,
                 borderColor: Color(0xff5FD068),
                 autoFocus: false,
-                showFieldAsBox:true ,
+                showFieldAsBox: true,
 
                 //runs when a code is typed in
                 onCodeChanged: (String code) {
                   //handle validation or checks here
                 },
-                onSubmit: (String verificationCode) {
-
-                },
+                onSubmit: (String verificationCode) {},
               ),
             ),
             const SizedBox(
@@ -87,7 +87,7 @@ class VerifyCode extends StatelessWidget {
             ),
             ButtomPrimary(
               tital: ManagerStrings.Reset_Password.tr,
-              gata: () {
+              onPressed: () {
                 controller.goResetPassword();
               },
             ),

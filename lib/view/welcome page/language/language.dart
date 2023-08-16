@@ -41,7 +41,6 @@ class LanguageApp extends StatelessWidget {
                   margin: EdgeInsetsDirectional.only(top: 40),
                   child: Text((ManagerStrings.Findyourhomeservic.tr),
                       style: TextStyle(
-
                           color: ManagerColors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 37,
@@ -81,7 +80,7 @@ class LanguageApp extends StatelessWidget {
                         onChanged: (val) {
                           controlle.Equals(val!);
                           controlle.change("en");
-                          Translationsz1.long1="en";
+                          Translationsz1.long1 = "en";
                         })),
               ),
               // Container(child: ListTile(
@@ -122,7 +121,7 @@ class LanguageApp extends StatelessWidget {
                         onChanged: (val) {
                           controlle.Equals(val!);
                           controlle.change("ar");
-                          Translationsz1.long1="ar";
+                          Translationsz1.long1 = "ar";
                         })),
               ),
             ),
@@ -134,32 +133,29 @@ class LanguageApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-
                   margin: EdgeInsetsDirectional.only(start: 0, top: 10),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                     GetBuilder<LanguageControlle>(
-                       builder: ( controller) {
-                      return Checkbox(
-                        fillColor: MaterialStateColor.resolveWith((states) => ManagerColors.green),
-                           activeColor: ManagerColors.green,
-                           value: controller.Checkboxbool,
-                           onChanged: (bool) {
-                             controller.Checkbox_(bool!);
-
-                           });
-                     },),
-                      Text(
-                          (ManagerStrings.Bycreatinganaccountyouagreetoour.tr),
+                      GetBuilder<LanguageControlle>(
+                        builder: (controller) {
+                          return Checkbox(
+                              fillColor: MaterialStateColor.resolveWith(
+                                  (states) => ManagerColors.green),
+                              activeColor: ManagerColors.green,
+                              value: controller.Checkboxbool,
+                              onChanged: (bool) {
+                                controller.Checkbox_(bool!);
+                              });
+                        },
+                      ),
+                      Text((ManagerStrings.Bycreatinganaccountyouagreetoour.tr),
                           style: const TextStyle(
                               fontWeight: FontWeight.w500,
                               color: ManagerColors.black80,
                               fontSize: ManagerFontSizes.s15,
-                              fontFamily:  ManagerFont.din)),
-
+                              fontFamily: ManagerFont.din)),
                     ],
-
                   ),
                 ),
                 Container(
@@ -173,22 +169,20 @@ class LanguageApp extends StatelessWidget {
                 ),
               ],
             ),
-
-
-
             GetBuilder<LanguageControlle>(
-              init:LanguageControlle() ,
-              builder: ( controller) {
-              return ButtomPrimary(
-                tital: ManagerStrings.Next.tr,
-                mtop: 45,
-                gata: () {
-                  if(controller.Checkboxbool){
-                    Get.offNamed(ManagerRoutes.onboarding1);
-                  }
-                },
-              );
-            },)
+              init: LanguageControlle(),
+              builder: (controller) {
+                return ButtomPrimary(
+                  tital: ManagerStrings.Next.tr,
+                  mtop: 45,
+                  onPressed: () {
+                    if (controller.Checkboxbool) {
+                      Get.offNamed(ManagerRoutes.onboarding1);
+                    }
+                  },
+                );
+              },
+            )
           ],
         ),
       ),

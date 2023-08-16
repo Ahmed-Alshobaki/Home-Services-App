@@ -6,11 +6,11 @@ validator(String val,min,type){
       return ManagerStrings.notvalidUsername.tr;
     }
   }
-      if(type=="email"){
-        if (!GetUtils.isEmail(type)) {
-          return ManagerStrings.notvalidemail.tr;
-        }
-      }
+      // if(type=="email"){
+      //   if (!GetUtils.isEmail(type)) {
+      //     return ManagerStrings.notvalidemail.tr;
+      //   }
+      // }
 
 
 

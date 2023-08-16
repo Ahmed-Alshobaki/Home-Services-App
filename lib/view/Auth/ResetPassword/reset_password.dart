@@ -117,7 +117,7 @@ class ResetPassword extends StatelessWidget {
             ),
             ButtomPrimary(
               tital: ManagerStrings.Submit.tr,
-              gata: () {
+              onPressed: () {
                 DialogA.getDialog(
                     context: context,
                     btnOkOnPress: () {},

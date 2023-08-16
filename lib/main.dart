@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:image_pickers/image_pickers.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_routes.dart';
+import 'package:shop/view/Home/Home.dart';
+import 'package:shop/view/test.dart';
 
 import 'Localizations/welcome page/locale/locale.dart';
 import 'Localizations/welcome page/onboarding1/Translations1.dart';
@@ -20,38 +22,32 @@ import 'view/welcome page/language/language.dart';
 import 'view/welcome page/onboarding1/onboarding1.dart';
 import 'view/welcome page/splash/splash.dart';
 
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Share  dd =Get.find();
-  dd.oninit1();
-  runApp(  MyApp());
+  await Share().oninit1();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-   MyApp({super.key});
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return GetMaterialApp(
-     initialRoute: ManagerRoutes.splash,
+     // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-    // home: Login(),
-     theme:ThemeData(
-        colorScheme: ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
-       appBarTheme: const AppBarTheme(
-         actionsIconTheme: IconThemeData(
-         ),
-         elevation: 0,
-         color: ManagerColors.white,
-         iconTheme: IconThemeData(
-             color: ManagerColors.black,
-         )
-       )
-     ),
+     home: Home(),
+      theme: ThemeData(
+          colorScheme:
+              ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
+          appBarTheme: const AppBarTheme(
+              actionsIconTheme: IconThemeData(),
+              elevation: 0,
+              color: ManagerColors.white,
+              iconTheme: IconThemeData(
+                color: ManagerColors.black,
+              ))),
       debugShowCheckedModeBanner: false,
 
       getPages: Pages.Page,

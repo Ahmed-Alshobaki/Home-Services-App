@@ -53,5 +53,11 @@ class ManagerStrings {
   static const String  notvalidphono=  "not valid phono";
   static const String  characters6=  "A password consisting of 6 characters";
   static const String  empty=  "The text can't be empty";
+  static const String  goodmorning=  "Good Morning";
+  static const String  goodname=  " Ahmed";
+  static const String  Findhomeservice=  '''Find Your Home Service
+Need a Helping Hand Today?''';
+  static const String  Ourservices=  "Our services";
+  static const String  SeeALL=  "See ALL";
 
 }

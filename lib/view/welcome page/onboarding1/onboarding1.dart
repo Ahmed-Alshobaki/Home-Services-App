@@ -24,14 +24,14 @@ import '../../widget/Buttom/Buttomprimary.dart';
 // }
 
 class OnBoarding1 extends StatelessWidget {
-   OnBoarding1({super.key});
+  OnBoarding1({super.key});
   Locale? langCode;
-   String? lang ;
+  String? lang;
   @override
   Widget build(BuildContext context) {
     OnBoarding OnBoarding1 = Get.put(OnBoarding());
     Localee Translationsz = Get.put(Localee());
-    lang= Translationsz.getlanguage(Get.deviceLocale!.languageCode);
+    lang = Translationsz.getlanguage(Get.deviceLocale!.languageCode);
     // TODO: implement build
     return Scaffold(
         body: Container(
@@ -43,16 +43,16 @@ class OnBoarding1 extends StatelessWidget {
             margin: EdgeInsetsDirectional.only(top: 50),
             alignment: AlignmentDirectional.topEnd,
             child: InkWell(
-              onTap: (){
-                Get.offNamed(ManagerRoutes.Login);
-              },
-                child:  Text(
-              ManagerStrings.Skip.tr,
-              style: TextStyle(
-                  fontSize: ManagerFontSizes.s18,
-                  fontFamily: Translationsz.getlang(lang!),
-                  color: ManagerColors.yellow),
-            )),
+                onTap: () {
+                  Get.offNamed(ManagerRoutes.Login);
+                },
+                child: Text(
+                  ManagerStrings.Skip.tr,
+                  style: TextStyle(
+                      fontSize: ManagerFontSizes.s18,
+                      fontFamily: Translationsz.getlang(lang!),
+                      color: ManagerColors.yellow),
+                )),
           ),
           Container(
             // _introKey
@@ -73,11 +73,10 @@ class OnBoarding1 extends StatelessWidget {
           ButtomPrimary(
             tital: ManagerStrings.Next.tr,
             bottom: 36.0,
-            gata: () {
+            onPressed: () {
               OnBoarding1.introKey.currentState?.next();
               int? a = OnBoarding1.introKey.currentState?.getCurrentPage();
               OnBoarding1.Done(a);
-
             },
           ),
         ],

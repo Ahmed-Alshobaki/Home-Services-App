@@ -68,6 +68,9 @@ dependencies:
   flutter_otp_text_field: ^1.1.0+2
   pinput: ^3.0.0
   awesome_dialog: ^3.1.0
+  carousel_slider: ^4.2.1
+  flutter_floating_bottom_bar: ^1.1.0
+  awesome_bottom_bar: ^1.2.4
 
 dev_dependencies:
   flutter_test:
@@ -98,6 +101,7 @@ flutter:
     - assets/onboarding/onboarding2/
     - assets/onboarding/onboarding3/
     - assets/login/
+    - assets/home/
     - assets/LanguageApp/
 
 

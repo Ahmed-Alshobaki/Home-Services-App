@@ -26,7 +26,7 @@ class Login extends StatelessWidget {
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
       body: WillPopScope(
-        onWillPop: (){
+        onWillPop: () {
           AwesomeDialog(
             context: context,
             dialogType: DialogType.info,
@@ -39,7 +39,8 @@ class Login extends StatelessWidget {
           return Future.value(true);
         },
         child: Container(
-          padding: EdgeInsetsDirectional.symmetric(vertical: 55, horizontal: 20),
+          padding:
+              EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
           child: Form(
             key: LoginControlle.globalKey,
             child: ListView(
@@ -70,12 +71,12 @@ class Login extends StatelessWidget {
                       )),
                 ),
                 const SizedBox(
-                  height: 60,
+                  height: 40,
                 ),
                 TextFormFieldcustom(
                   controller: LoginControlle.email,
-                  validator: (val){
-                   return validator(val!,25,"email");
+                  validator: (val) {
+                    return validator(val!, 25, "email");
                   },
                   tital: ManagerStrings.Email,
                   hint: ManagerStrings.EnterYourEmail.tr,
@@ -90,8 +91,8 @@ class Login extends StatelessWidget {
                   builder: (controller) {
                     return TextFormFieldcustom(
                       controller: LoginControlle.password,
-                      validator: (val){
-                        return validator(val!,6,"password");
+                      validator: (val) {
+                        return validator(val!, 6, "password");
                       },
                       obscureText: LoginControlle.obscureText,
                       tital: ManagerStrings.Password,
@@ -110,7 +111,7 @@ class Login extends StatelessWidget {
                 Container(
                     margin: EdgeInsetsDirectional.only(top: 15),
                     child: InkWell(
-                      onTap: (){
+                      onTap: () {
                         LoginControlle.gotoForgetPasswordpage();
                       },
                       child: Text(
@@ -125,7 +126,7 @@ class Login extends StatelessWidget {
                   height: 40,
                 ),
                 ButtomPrimary(
-                  gata: (){
+                  onPressed:(){
                     LoginControlle.gohome();
                   },
                   tital: ManagerStrings.Login,
