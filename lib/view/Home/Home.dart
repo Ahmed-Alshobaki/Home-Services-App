@@ -2,6 +2,7 @@ import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:awesome_bottom_bar/tab_item.dart';
 import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
@@ -9,31 +10,56 @@ import 'package:get/get.dart';
 import 'package:shop/controlle/Home/Home.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_strings.dart';
+import 'package:shop/view/test.dart';
 
+import '../../controlle/Home/Home.dart';
 import '../../core/resources/manager_fonts.dart';
+import '../test.dart';
 
 class Home extends StatelessWidget {
-   Home({super.key});
-   HomeControlle control = Get.put(HomeControlle());
+  Home({super.key});
+
+  HomeControlle control = Get.put(HomeControlle());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        excludeHeaderSemantics: true,
+        elevation: 0,
+
         centerTitle: true,
         leading: InkWell(
             onTap: () {}, child: Image.asset("assets/home/Bell_pin.png")),
-        title: Image.asset("assets/home/Group2.png"),
+        title: Image.asset("assets/home/Group29.png"),
+      ),
+      bottomNavigationBar: GetBuilder<HomeControlle>(
+        init: HomeControlle(),
+        builder: (controller) {
+          return BottomBarFloating(
+              items: control.items,
+              backgroundColor: Colors.white,
+              color: Colors.black45,
+              colorSelected: Colors.green,
+              indexSelected: control.visit,
+              onTap: (int index) {
+                control.getdata(index);
+                print(index);
+              });
+        },
       ),
       body: Container(
-        margin: EdgeInsetsDirectional.symmetric(horizontal: 15),
+        margin: EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 0),
         child: ListView(
-          children:  [
+          shrinkWrap: false,
+          children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 25,),
+                SizedBox(
+                  height: 25,
+                ),
                 const Row(
                   children: [
                     Text(
@@ -54,8 +80,10 @@ class Home extends StatelessWidget {
                             ))),
                   ],
                 ),
-                const SizedBox(height: 10,),
-                Text(
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
                   ManagerStrings.Findhomeservice,
                   style: TextStyle(
                       fontSize: 24,
@@ -63,18 +91,21 @@ class Home extends StatelessWidget {
                       fontFamily: ManagerFont.quicksand,
                       color: ManagerColors.black),
                 ),
-
+                const SizedBox(
+                  height: 12,
+                ),
                 CarouselSlider(
-                    items: listimages,
-                    carouselController:control.buttonCarouselController ,
+                    items: control.listimages,
+                    carouselController: control.buttonCarouselController,
                     options: CarouselOptions(
-                      onPageChanged: (i,o){
+                      onPageChanged: (i, o) {
+                        control.getdataindex(i);
+                        print(control.indexx);
                       },
                       height: 150,
-                      aspectRatio: 16/9,
+                      aspectRatio: 16 / 9,
                       viewportFraction: 0.8,
                       initialPage: 0,
-
                       enableInfiniteScroll: true,
                       reverse: false,
                       autoPlay: true,
@@ -88,75 +119,190 @@ class Home extends StatelessWidget {
                       enlargeCenterPage: true,
                       enlargeFactor: 0.3,
                       scrollDirection: Axis.horizontal,
+                    )),
 
-                    )
-                ),
-                Row(children: [
-                  Text(
-                    ManagerStrings.Ourservices,
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: ManagerFont.quicksand,
-                        color: ManagerColors.black),
-                  ),
-                  Spacer(),
-                  Text(
-                    ManagerStrings.SeeALL,
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: ManagerFont.quicksand,
-                        color: ManagerColors.green),
-                  ),
-                ],),
                 Container(
-                  alignment: Alignment.bottomCenter,
-
+                  alignment: Alignment.center,
                   child: GetBuilder<HomeControlle>(
-                    init:HomeControlle() ,
-                    builder: ( controller) {
-                      return  BottomBarFloating(
-                          items: items,
-                          backgroundColor: Colors.white,
-                          color: Colors.black45,
-                          colorSelected: Colors.green,
-                          indexSelected: control.visit,
-                          onTap: (int index){
-                            control.getdata(index);
+                    builder: (controller) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ...List.generate(
+                            control.items.length - 1,
+                                (index) => AnimatedContainer(
+                              margin: EdgeInsetsDirectional.only(start: 5),
+                              duration: Duration(seconds: 500),
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                color:control.zon(index),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          )
+                        ],
+                      );
+                    },
+                  ),
+                ),
+                Row(
+                  children: [
+                    const Text(
+                      ManagerStrings.Ourservices,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: ManagerFont.quicksand,
+                          color: ManagerColors.black),
+                    ),
+                    Spacer(),
+                    Text(
+                      ManagerStrings.SeeALL,
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: ManagerFont.quicksand,
+                          color: ManagerColors.green),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                
+                Container(
 
-                          });
-                    },),
-                )
+                    height: 330,
+                    width: double.infinity,
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                    child: Container(
+                                
+                                  height: 200,
+                                  width: double.infinity,
+                                  child: const Card(
+                                      child: Column(
+                                    children: [
+                                      Expanded(
+                                        child: Image(
+                                            image: AssetImage(
+                                                "assets/home/Group1a.png")),
+                                      ),
+                                      Text(
+                                        "hourly cleaning",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontFamily: ManagerFont.quicksand),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                    ],
+                                  )),
+                                )),
+                                Expanded(
+                                    child: Container(
+                                  height: 200,
+                                  width: double.infinity,
+                                  child: const Card(
+                                      child: Column(
+                                    children: [
+                                      Expanded(
+                                        child: Image(
+                                            image: AssetImage(
+                                                "assets/home/Group2a.png")),
+                                      ),
+                                      Text(
+                                        "contract cleaning",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontFamily: ManagerFont.quicksand),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                    ],
+                                  )),
+                                )),
+                              ],
+                            ),
+                            Container(
+
+                              child: Row(
+                                
+                                children: [
+                                  Expanded(
+                                      child: Container(
+                                    height: 200,
+                                    width: double.infinity,
+                                    child: Card(
+                                        child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/home/Group2.png")),
+                                        ),
+                                        Text(
+                                          "car wash",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontFamily: ManagerFont.quicksand),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                      ],
+                                    )),
+                                  )),
+                                  Expanded(
+                                      child: Container(
+                                        margin: EdgeInsetsDirectional.symmetric(
+                                            vertical: 10),
+                                    height: 200,
+                                    width: double.infinity,
+                                    child: const Card(
+                                        child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/home/Group4a.png")),
+                                        ),
+                                        Text(
+                                          "electrical",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontFamily: ManagerFont.quicksand),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                      ],
+                                    )),
+                                  )),
+
+                                ],
+                              ),
+                            ),
+
+                          ],
+                        ),
+
+                      ],
+                    ))
               ],
             ),
-
           ],
-
         ),
       ),
     );
   }
 }
- late List<Widget>? listimages = [Image.asset("assets/home/1.png"),Image.asset("assets/home/1.png"),Image.asset("assets/home/1.png")];
-
-List<TabItem> items = [
-  TabItem(
-    icon: Icons.home,
-   title: 'Home',
-  ),
-
-
-  TabItem(
-    icon: Icons.shopping_cart_outlined,
-    title: 'Cart',
-  ),
-  TabItem(
-    icon: Icons.space_dashboard_sharp,
-    title: 'Shop',
-  ),
-  TabItem(
-    icon: Icons.person,
-    title: 'profile',
-  ),
-];
