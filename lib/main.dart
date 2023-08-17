@@ -4,6 +4,7 @@ import 'package:image_pickers/image_pickers.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_routes.dart';
 import 'package:shop/view/Home/Home.dart';
+import 'package:shop/view/Home/shop.dart';
 import 'package:shop/view/test.dart';
 
 import 'Localizations/welcome page/locale/locale.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
      // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     home: Home(),
+     home: Shop(),
       theme: ThemeData(
           colorScheme:
               ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),

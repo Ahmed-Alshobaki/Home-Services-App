@@ -59,5 +59,6 @@ class ManagerStrings {
 Need a Helping Hand Today?''';
   static const String  Ourservices=  "Our services";
   static const String  SeeALL=  "See ALL";
+  static const String  Categories=  "Categories";
 
 }

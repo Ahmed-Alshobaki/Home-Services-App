@@ -15,6 +15,7 @@ import 'package:shop/view/test.dart';
 import '../../controlle/Home/Home.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../test.dart';
+import '../widget/BottomBarFloating.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -36,16 +37,11 @@ class Home extends StatelessWidget {
       bottomNavigationBar: GetBuilder<HomeControlle>(
         init: HomeControlle(),
         builder: (controller) {
-          return BottomBarFloating(
-              items: control.items,
-              backgroundColor: Colors.white,
-              color: Colors.black45,
-              colorSelected: Colors.green,
-              indexSelected: control.visit,
-              onTap: (int index) {
-                control.getdata(index);
-                print(index);
-              });
+          return BottomBarFloatinn(indexSelected: control.visit,onTap: (i){
+            control.getdata(i);
+                 print(i);
+          },itemss:BottomBarFloatinn.items ,);
+
         },
       ),
       body: Container(
@@ -100,6 +96,7 @@ class Home extends StatelessWidget {
                     options: CarouselOptions(
                       onPageChanged: (i, o) {
                         control.getdataindex(i);
+                        control.gotoshop();
                         print(control.indexx);
                       },
                       height: 150,
@@ -129,7 +126,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ...List.generate(
-                            control.items.length - 1,
+                                      3,
                                 (index) => AnimatedContainer(
                               margin: EdgeInsetsDirectional.only(start: 5),
                               duration: Duration(seconds: 500),

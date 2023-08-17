@@ -13,4 +13,8 @@ class ManagerRoutes {
   static const VerifyCodeSingup = "/VerifyCodeSingup";
   //Home
   static const Home = "/Home";
+  static const Shop = "/Shop";
+
+
+
 }
