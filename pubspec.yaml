@@ -102,6 +102,7 @@ flutter:
     - assets/onboarding/onboarding3/
     - assets/login/
     - assets/home/
+    - assets/profile/
     - assets/LanguageApp/
 
 

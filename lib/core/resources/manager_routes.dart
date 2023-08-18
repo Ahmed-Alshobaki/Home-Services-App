@@ -14,7 +14,7 @@ class ManagerRoutes {
   //Home
   static const Home = "/Home";
   static const Shop = "/Shop";
-
+  static const Profile = "/Profile";
 
 
 }

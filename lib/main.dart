@@ -19,6 +19,7 @@ import 'view/Auth/login/Login.dart';
 
 import 'view/Auth/verifycodeReset/verifycode.dart';
 import 'view/Auth/verifycodeResetSingup/verifycode.dart';
+import 'view/Home/profile.dart';
 import 'view/welcome page/language/language.dart';
 import 'view/welcome page/onboarding1/onboarding1.dart';
 import 'view/welcome page/splash/splash.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
      // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     home: Shop(),
+     home: Profile(),
       theme: ThemeData(
           colorScheme:
               ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
