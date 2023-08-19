@@ -7,6 +7,7 @@ import '../../controlle/profile/porfile.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
 import '../widget/BottomBarFloating.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 class Profile extends StatelessWidget {
   Profile({super.key});
@@ -47,7 +48,6 @@ class Profile extends StatelessWidget {
         child: Column(
           children: [
             Container(
-
               height: 200,
               width: 389,
               decoration: BoxDecoration(
@@ -57,8 +57,9 @@ class Profile extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsetsDirectional.only(top: 8),
-                      child: Image(image: AssetImage("assets/profile/profile.png"))),
+                      margin: EdgeInsetsDirectional.only(top: 8),
+                      child: Image(
+                          image: AssetImage("assets/profile/profile.png"))),
                   SizedBox(
                     height: 15,
                   ),
@@ -117,7 +118,6 @@ class Profile extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-
                   Positioned(
                     left: 16,
                     top: 24,
@@ -224,8 +224,8 @@ class Profile extends StatelessWidget {
                       right: 10,
                       top: 25,
                       child: Container(
-                    child: Icon(Icons.arrow_forward_ios_rounded),
-                  ))
+                        child: Icon(Icons.arrow_forward_ios_rounded),
+                      ))
                 ],
               ),
             ),
@@ -241,7 +241,6 @@ class Profile extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-
                   Positioned(
                     left: 16,
                     top: 24,
@@ -268,8 +267,8 @@ class Profile extends StatelessWidget {
                                   Positioned(
                                     left: 3.81,
                                     top: 2.17,
-                                    child:
-                                    Image.asset("assets/profile/marker.png"),
+                                    child: Image.asset(
+                                        "assets/profile/marker.png"),
                                   ),
                                 ],
                               ),
@@ -365,7 +364,6 @@ class Profile extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-
                   Positioned(
                     left: 16,
                     top: 24,
@@ -392,8 +390,8 @@ class Profile extends StatelessWidget {
                                   Positioned(
                                     left: 3.81,
                                     top: 2.17,
-                                    child:
-                                    Image.asset("assets/profile/notify.png"),
+                                    child: Image.asset(
+                                        "assets/profile/notify.png"),
                                   ),
                                 ],
                               ),
@@ -471,9 +469,20 @@ class Profile extends StatelessWidget {
                   Positioned(
                       right: 10,
                       top: 25,
-                      child: Container(
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ))
+                      child: Container(child: GetBuilder<porfileController>(
+                        builder: (controller) {
+                          return FlutterSwitch(
+                            activeColor: ManagerColors.green,
+                            height: 24,
+                            width: 46,
+                            valueFontSize: 24,
+                            value: profilecontroller.valueSwitsh,
+                            onToggle: (bool value) {
+                              profilecontroller.getdataSwitsh(value);
+                            },
+                          );
+                        },
+                      )))
                 ],
               ),
             ),
@@ -489,7 +498,6 @@ class Profile extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-
                   Positioned(
                     left: 16,
                     top: 24,
@@ -516,8 +524,8 @@ class Profile extends StatelessWidget {
                                   Positioned(
                                     left: 3.81,
                                     top: 2.17,
-                                    child:
-                                    Image.asset("assets/profile/Calling.png"),
+                                    child: Image.asset(
+                                        "assets/profile/Calling.png"),
                                   ),
                                 ],
                               ),
@@ -613,7 +621,6 @@ class Profile extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-
                   Positioned(
                     left: 16,
                     top: 24,
@@ -640,8 +647,8 @@ class Profile extends StatelessWidget {
                                   Positioned(
                                     left: 3.81,
                                     top: 2.17,
-                                    child:
-                                    Image.asset("assets/profile/Logout.png"),
+                                    child: Image.asset(
+                                        "assets/profile/Logout.png"),
                                   ),
                                 ],
                               ),
@@ -699,7 +706,6 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   Positioned(
                       right: 10,
                       top: 25,
@@ -710,8 +716,6 @@ class Profile extends StatelessWidget {
               ),
             ),
             Spacer(),
-
-
           ],
         ),
       ),
