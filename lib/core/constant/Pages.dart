@@ -7,7 +7,8 @@ import '../../view/Auth/login/Login.dart';
 import '../../view/Auth/verifycodeReset/verifycode.dart';
 import '../../view/Auth/verifycodeResetSingup/verifycode.dart';
 import '../../view/Home/Home.dart';
-import '../../view/Home/profile.dart';
+import '../../view/profile/editprofile.dart';
+import '../../view/profile/profile.dart';
 import '../../view/Home/shop.dart';
 import '../../view/welcome page/language/language.dart';
 import '../../view/welcome page/onboarding1/onboarding1.dart';
@@ -30,7 +31,7 @@ class Pages {
     GetPage(name: ManagerRoutes.Home, page: () => Home()),
     GetPage(name: ManagerRoutes.Shop, page: () => Shop()),
     GetPage(name: ManagerRoutes.Profile, page: () => Profile()),
-
+    GetPage(name: ManagerRoutes.Editprofile, page: () => Editprofile()),
 
   ];
 
