@@ -83,19 +83,6 @@ class LanguageApp extends StatelessWidget {
                           Translationsz1.long1 = "en";
                         })),
               ),
-              // Container(child: ListTile(
-              //   leading:  Text((ManagerStrings.English),
-              //       textAlign: TextAlign.left,
-              //       style: TextStyle(
-              //           color: ManagerColors.black,
-              //           fontWeight: FontWeight.bold,
-              //           fontSize: ManagerFontSizes.s18,
-              //           fontFamily: ManagerFont.quicksand)),
-              //   trailing: Radio(value: " ", onChanged: (vale1) {
-              //     language = vale1!;
-              //   }, groupValue: language),
-              //
-              // ),)
             ),
             const Divider(
               indent: 16,
@@ -140,8 +127,7 @@ class LanguageApp extends StatelessWidget {
                       GetBuilder<LanguageControlle>(
                         builder: (controller) {
                           return Checkbox(
-                              fillColor: MaterialStateColor.resolveWith(
-                                  (states) => ManagerColors.green),
+
                               activeColor: ManagerColors.green,
                               value: controller.Checkboxbool,
                               onChanged: (bool) {

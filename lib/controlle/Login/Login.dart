@@ -8,9 +8,10 @@ import '../../core/resources/manager_routes.dart';
 
 class LoginController extends GetxController {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
-  TextEditingController? email;
-  TextEditingController? password;
+  TextEditingController email= new TextEditingController();
+  TextEditingController password=new TextEditingController();
   Card1 card = Card1();
+  var data;
 
   bool obscureText = false;
   void cheng() {
@@ -27,17 +28,19 @@ class LoginController extends GetxController {
   }
 
   gohome() async {
-    var data = globalKey.currentState;
-    if (data!.validate()) {
-      var data = await card.postRequest(ManagerConstant.linkligon, {
-        "email": email?.text,
-        "password": password?.text,
+    var datakey = globalKey.currentState;
+    if (datakey!.validate()) {
+       data = await card.postRequest(ManagerConstant.linkligon, {
+        "email": email.text,
+        "password": password.text,
       });
       if (data["success"] == true) {
         Get.offNamed(ManagerRoutes.Home);
       }
     } else {
       print("object1");
+      print(data);
+
     }
   }
 }

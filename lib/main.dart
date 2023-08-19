@@ -37,10 +37,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-     // initialRoute: ManagerRoutes.splash,
+   initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     home: Editprofile(),
+     //home: SingUp(),
       theme: ThemeData(
           colorScheme:
               ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),

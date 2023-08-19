@@ -15,7 +15,7 @@ validator(String val,min,type){
 
 
 
-  if (val.length<=6) {
+  if (val.length<=4) {
     return ManagerStrings.characters6.tr;
   }
      if (val.isEmpty) {

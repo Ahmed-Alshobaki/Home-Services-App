@@ -242,7 +242,7 @@ class SingUp extends StatelessWidget {
                           SingUpControllerr.gotoAingup();
                         },
                         child: Text(
-                          ManagerStrings.SignUp.tr,
+                          ManagerStrings.Login.tr,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: Translationsz1.getlang(lang1),

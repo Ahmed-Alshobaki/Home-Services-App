@@ -7,6 +7,7 @@ import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
 import '../../../controlle/Login/Login.dart';
 import '../../../core/functions/AlertExitApp.dart';
+import '../../../core/functions/share.dart';
 import '../../../core/functions/validator.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
@@ -19,6 +20,7 @@ class Login extends StatelessWidget {
   Login({super.key});
 
   LoginController LoginControlle = Get.put(LoginController());
+   Share dd = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +79,7 @@ class Login extends StatelessWidget {
                   controller: LoginControlle.email,
                   validator: (val) {
                     return validator(val!, 25, "email");
+
                   },
                   tital: ManagerStrings.Email,
                   hint: ManagerStrings.EnterYourEmail.tr,
@@ -92,7 +95,8 @@ class Login extends StatelessWidget {
                     return TextFormFieldcustom(
                       controller: LoginControlle.password,
                       validator: (val) {
-                        return validator(val!, 6, "password");
+                        return validator(val!, 5, "password");
+
                       },
                       obscureText: LoginControlle.obscureText,
                       tital: ManagerStrings.Password,
@@ -126,8 +130,9 @@ class Login extends StatelessWidget {
                   height: 40,
                 ),
                 ButtomPrimary(
-                  onPressed:(){
-                    LoginControlle.gohome();
+                  onPressed:()async{
+                   await LoginControlle.gohome();
+
                   },
                   tital: ManagerStrings.Login,
                 ),

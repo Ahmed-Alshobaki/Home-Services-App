@@ -51,7 +51,7 @@ class ManagerStrings {
   static const String  notvalidUsername=  "not valid username";
   static const String  notvalidemail=  "not valid email";
   static const String  notvalidphono=  "not valid phono";
-  static const String  characters6=  "A password consisting of 6 characters";
+  static const String  characters6=  "A password consisting of 5 characters";
   static const String  empty=  "The text can't be empty";
   static const String  goodmorning=  "Good Morning";
   static const String  goodname=  " Ahmed";
