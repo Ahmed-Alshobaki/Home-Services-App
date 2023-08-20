@@ -13,7 +13,6 @@ class HomeControlle extends GetxController{
         visit = index;
         update();
       }
-
       zon(int index){
 
       return  visit==index?Colors.green:Colors.black26;
@@ -27,12 +26,16 @@ class HomeControlle extends GetxController{
 
   }
 
-  gotoshop(){
+  gotopag(){
+    if(visit==3){
+      Get.toNamed(ManagerRoutes.Profile);
+      update();
+      visit=0;
+    }
     if(visit==2){
       Get.toNamed(ManagerRoutes.Shop);
       update();
       visit=0;
     }
-
   }
 }

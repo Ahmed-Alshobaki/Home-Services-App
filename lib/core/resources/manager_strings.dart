@@ -64,5 +64,9 @@ Need a Helping Hand Today?''';
   static const String  name=  "Abdul Aziz Al-Qahtany";
   static const String  EditProfile=  "Edit Profile";
   static const String  DeleteAccoun=  "Delete Accoun";
+  static const String  History=  "History";
+  static const String  AddCard=  "Add Card";
+  static const String  CardName=  "Card Name";
+  static const String  Cardtype=  "Card type";
 
 }

@@ -1,71 +1,49 @@
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
-
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 
-const List<TabItem> items = [
-  TabItem(
-    icon: Icons.home,
-    // title: 'Home',
-  ),
-  TabItem(
-    icon: Icons.search_sharp,
-    title: 'Shop',
-  ),
-  TabItem(
-    icon: Icons.favorite_border,
-    title: 'Wishlist',
-  ),
-  TabItem(
-    icon: Icons.shopping_cart_outlined,
-    title: 'Cart',
-  ),
-  TabItem(
-    icon: Icons.account_box,
-    title: 'profile',
-  ),
+final List<String> genderItems = [
+  'Male',
+  'Female',
 ];
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+String? selectedValue;
 
-  final String title;
+final _formKey = GlobalKey<FormState>();
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Form(
+      key: _formKey,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 80),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextFormField(
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(16),
+                hintText: 'Enter Your Full Name.',
+                hintStyle: const TextStyle(fontSize: 14),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
 
-class _MyHomePageState extends State<MyHomePage> {
-  int visit = 0;
-  double height = 30;
-  Color colorSelect =const Color(0XFF0686F8);
-  Color color = const Color(0XFF7AC0FF);
-  Color color2 = const Color(0XFF96B1FD);
-  Color bgColor = const  Color(0XFF1752FE);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-
-      bottomNavigationBar: Container(
-        padding:const EdgeInsets.only(bottom: 30, right: 32, left: 32),
-        child: BottomBarFloating(
-          items: items,
-          backgroundColor: Colors.green,
-          color: Colors.white,
-          colorSelected: Colors.orange,
-          indexSelected: visit,
-          paddingVertical: 24,
-
-          onTap: (int index) => setState(() {
-            visit = index;
-          }),
+            const SizedBox(height: 30),
+            TextButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  _formKey.currentState!.save();
+                }
+              },
+              child: const Text('Submit Button'),
+            ),
+          ],
         ),
       ),
-    );
-  }
-
-  avoidPrint(String s) {}
+    ),
+  );
 }

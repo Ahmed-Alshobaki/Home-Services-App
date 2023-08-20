@@ -17,6 +17,8 @@ class ManagerRoutes {
   static const Profile = "/Profile";
   //profile
   static const Editprofile = "/Editprofile";
+  static const History = "/History";
+  static const Addcard = "/Addcard";
 
 
 }

@@ -76,7 +76,9 @@ class Profile extends StatelessWidget {
                   MaterialButton(
                     height: 35,
                     minWidth: 76,
-                    onPressed: () {},
+                    onPressed: () {
+                      profilecontroller.gotoedit();
+                    },
                     child: Text("edit"),
                     color: ManagerColors.green,
                     shape: RoundedRectangleBorder(

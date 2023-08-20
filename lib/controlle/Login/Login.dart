@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/functions/crud.dart';
+import '../../core/functions/share.dart';
 import '../../core/resources/ManagerConstant.dart';
 import '../../core/resources/manager_routes.dart';
 
@@ -11,6 +12,7 @@ class LoginController extends GetxController {
   TextEditingController email= new TextEditingController();
   TextEditingController password=new TextEditingController();
   Card1 card = Card1();
+  Share share = Get.find();
   var data;
 
   bool obscureText = false;
@@ -35,7 +37,10 @@ class LoginController extends GetxController {
         "password": password.text,
       });
       if (data["success"] == true) {
+       share.zon.setString("id",data["data"]["users_id"].toString() );
+       print(share.zon.getString("id"));
         Get.offNamed(ManagerRoutes.Home);
+
       }
     } else {
       print("object1");

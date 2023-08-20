@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:image_pickers/image_pickers.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_routes.dart';
+import 'package:shop/view/History/History.dart';
+import 'package:shop/view/Home/Addcard.dart';
 import 'package:shop/view/Home/Home.dart';
 import 'package:shop/view/Home/shop.dart';
 import 'package:shop/view/test.dart';
@@ -37,10 +39,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-   initialRoute: ManagerRoutes.splash,
+  // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-     //home: SingUp(),
+      home: Addcard(),
       theme: ThemeData(
           colorScheme:
               ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),

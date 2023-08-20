@@ -20,7 +20,7 @@ class Login extends StatelessWidget {
   Login({super.key});
 
   LoginController LoginControlle = Get.put(LoginController());
-   Share dd = Get.find();
+
 
   @override
   Widget build(BuildContext context) {

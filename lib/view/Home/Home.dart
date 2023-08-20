@@ -25,25 +25,23 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        excludeHeaderSemantics: true,
-        elevation: 0,
-
-        centerTitle: true,
-        leading: InkWell(
-            onTap: () {}, child: Image.asset("assets/home/Bell_pin.png")),
-        title: Image.asset("assets/home/Group29.png"),
-      ),
-      bottomNavigationBar: GetBuilder<HomeControlle>(
-        init: HomeControlle(),
-        builder: (controller) {
-          return BottomBarFloatinn(indexSelected: control.visit,onTap: (i){
-            control.getdata(i);
-                 print(i);
-          },itemss:BottomBarFloatinn.items ,);
-
-        },
-      ),
+        appBar: AppBar(
+          elevation: 0,
+          centerTitle: true,
+          title: const Text(
+            ManagerStrings.Categories,
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: ManagerFont.quicksand,
+                fontSize: 20),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(Icons.arrow_back_ios_new),
+          ),
+        ),
       body: Container(
         margin: EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 0),
         child: ListView(
@@ -96,7 +94,7 @@ class Home extends StatelessWidget {
                     options: CarouselOptions(
                       onPageChanged: (i, o) {
                         control.getdataindex(i);
-                        control.gotoshop();
+                        control.gotopag();
                         print(control.indexx);
                       },
                       height: 150,

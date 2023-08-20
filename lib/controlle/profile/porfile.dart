@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 
 class porfileController extends GetxController{
 
@@ -8,10 +9,14 @@ class porfileController extends GetxController{
         valueSwitsh = value;
         update();
       }
-  late int visit = 0;
+  late int visit = 3;
   getdata(int index ){
     visit = index;
     update();
+  }
+
+  gotoedit(){
+    Get.toNamed(ManagerRoutes.Editprofile);
   }
 
 }
