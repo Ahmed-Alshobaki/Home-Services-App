@@ -54,8 +54,8 @@ class History extends StatelessWidget {
                   unselectedLabelColor:Color(0xffB5B5B5),
           ),
           tabs: const [
-            Text('Underway',style: TextStyle(fontFamily:ManagerFont.quicksand ),),
-            Text('Previous',style: TextStyle(fontFamily:ManagerFont.quicksand )),
+            Text('Underway',style: TextStyle(fontFamily:ManagerFont.quicksand,fontSize: 16 ),),
+            Text('Previous',style: TextStyle(fontFamily:ManagerFont.quicksand ,fontSize: 16)),
           ],
           views: [
             Container(
