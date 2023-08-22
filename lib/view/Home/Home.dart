@@ -1,22 +1,15 @@
-import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
-import 'package:awesome_bottom_bar/tab_item.dart';
-import 'package:awesome_bottom_bar/widgets/inspired/inspired.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dartz/dartz.dart';
-import 'package:flutter/gestures.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
+
 import 'package:get/get.dart';
 import 'package:shop/controlle/Home/Home.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_strings.dart';
-import 'package:shop/view/test.dart';
-
-import '../../controlle/Home/Home.dart';
 import '../../core/resources/manager_fonts.dart';
-import '../test.dart';
 import '../widget/BottomBarFloating.dart';
-
 class Home extends StatelessWidget {
   Home({super.key});
 
@@ -25,25 +18,23 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
           centerTitle: true,
-          title: const Text(
-            ManagerStrings.Categories,
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: ManagerFont.quicksand,
-                fontSize: 20),
-          ),
-          leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(Icons.arrow_back_ios_new),
-          ),
+          title: Image.asset("assets/home/Group29.png"),
+         leading: Image.asset("assets/home/Bell_pin.png"),
         ),
+      bottomNavigationBar: BottomBarFloatinn(
+        indexSelected: control.visit,
+        onTap: (int) {
+          control.getdata(int);
+          control.gotopag();
+        },
+        itemss: BottomBarFloatinn.items,
+      ),
       body: Container(
-        margin: EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 0),
+        margin: const EdgeInsetsDirectional.symmetric(horizontal: 15, vertical: 0),
         child: ListView(
           shrinkWrap: false,
           children: [
@@ -51,7 +42,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 const Row(
@@ -108,8 +99,8 @@ class Home extends StatelessWidget {
                       pauseAutoPlayOnManualNavigate: true,
                       animateToClosest: true,
                       pauseAutoPlayOnTouch: true,
-                      autoPlayInterval: Duration(seconds: 3),
-                      autoPlayAnimationDuration: Duration(milliseconds: 600),
+                      autoPlayInterval: const Duration(seconds: 3),
+                      autoPlayAnimationDuration: const Duration(milliseconds: 600),
                       autoPlayCurve: Curves.fastOutSlowIn,
                       enlargeCenterPage: true,
                       enlargeFactor: 0.3,
@@ -237,7 +228,7 @@ class Home extends StatelessWidget {
                                       child: Container(
                                     height: 200,
                                     width: double.infinity,
-                                    child: Card(
+                                    child: const Card(
                                         child: Column(
                                       children: [
                                         Expanded(
@@ -259,7 +250,7 @@ class Home extends StatelessWidget {
                                   )),
                                   Expanded(
                                       child: Container(
-                                        margin: EdgeInsetsDirectional.symmetric(
+                                        margin: const EdgeInsetsDirectional.symmetric(
                                             vertical: 10),
                                     height: 200,
                                     width: double.infinity,

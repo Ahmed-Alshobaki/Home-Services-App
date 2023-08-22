@@ -41,7 +41,7 @@ class SingUp extends StatelessWidget {
           key: SingUpControllerr.key,
           child: ListView(
             padding:
-                EdgeInsetsDirectional.symmetric(vertical: 75, horizontal: 20),
+                EdgeInsetsDirectional.symmetric(vertical: 80, horizontal: 20),
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: false,
             children: [

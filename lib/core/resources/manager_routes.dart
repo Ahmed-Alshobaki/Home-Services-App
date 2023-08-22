@@ -19,6 +19,7 @@ class ManagerRoutes {
   static const Editprofile = "/Editprofile";
   static const History = "/History";
   static const Addcard = "/Addcard";
+  static const cart = "/cart";
 
 
 }

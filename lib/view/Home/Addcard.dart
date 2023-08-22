@@ -5,8 +5,12 @@ import 'package:shop/view/test.dart';
 
 import '../../controlle/addCard/addcard.dart';
 import '../../core/functions/validator.dart';
+import '../../core/resources/manager_colors.dart';
+import '../../core/resources/manager_font_sizes.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
+import '../widget/Buttom/Buttomprimary.dart';
+import '../widget/TextFormField/TextForm2.dart';
 import '../widget/TextFormField/TextFormFieldcustom.dart';
 
 class Addcard extends StatelessWidget {
@@ -36,98 +40,162 @@ class Addcard extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.all(10),
-        child: Column(
+        padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+        child: ListView(
           children: [
-            Form(
-                child: Column(
+            Column(
               children: [
-                TextFormFieldcustom(
-                  controller: addcardcontroller.name,
-                  validator: (val) {
-                    return validator(val!, 15, "name");
-                  },
-                  tital: ManagerStrings.CardName,
-                  hint: ManagerStrings.EnterYourFullName.tr,
-                  Iconn: Icon(Icons.person_outline),
-                  obscureText: false,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                // Container(
-                //   width: 400,
-                //   child: DropdownButton<String>(
-                //       items: addcardcontroller.cards
-                //           .map((itam) => DropdownMenuItem<String>(
-                //               value:itam ,
-                //               child: Text(itam!, style: TextStyle(fontSize: 24),
-                //               )
-                //       )
-                //       ).toList(),
-                //       onChanged: (itam)=>addcardcontroller.cardselect= itam),
-                // )
-                DropdownButtonFormField2<String>(
-                  isExpanded: true,
-                  decoration: InputDecoration(
-                    // Add Horizontal padding using menuItemStyleData.padding so it matches
-                    // the menu padding when button's width is not specified.
-                    contentPadding: const EdgeInsets.symmetric(vertical: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    // Add more decoration..
-                  ),
-                  hint: const Text(
-                    'Select Your Gender',
-                    style: TextStyle(fontSize: 14),
-                  ),
-                  items: genderItems
-                      .map((item) => DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(
-                      item,
-                      style: const TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                  ))
-                      .toList(),
-                  validator: (value) {
-                    if (value == null) {
-                      return 'Please select gender.';
-                    }
-                    return null;
-                  },
-                  onChanged: (value) {
-                    //Do something when selected item is changed.
-                  },
-                  onSaved: (value) {
-                    selectedValue = value.toString();
-                  },
-                  buttonStyleData: const ButtonStyleData(
-                    padding: EdgeInsets.only(right: 8),
-                  ),
-                  iconStyleData: const IconStyleData(
-                    icon: Icon(
-                      Icons.arrow_drop_down,
-                      color: Colors.black45,
-                    ),
-                    iconSize: 24,
-                  ),
-                  dropdownStyleData: DropdownStyleData(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                  menuItemStyleData: const MenuItemStyleData(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                  ),
-                ),
+                Form(
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        TextFormFieldcustom2(
+                          controller: addcardcontroller.name,
+                          validator: (val) {
+                            return validator(val!, 15, "name");
+                          },
+                          tital: ManagerStrings.CardName,
+                          hint: ManagerStrings.name,
+
+                          obscureText: false,
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        DropdownButtonFormField2<String>(
+                          isExpanded: true,
+                          decoration: InputDecoration(
+                              hintText: "Visa",
+                              fillColor: ManagerColors.greenfath,
+                              filled: true,
+                              contentPadding: const EdgeInsetsDirectional.symmetric(
+                                  vertical: 14, horizontal: 16),
+                              label: const Text(
+                                "Card type",
+                                style: TextStyle(
+                                  color: ManagerColors.black,
+                                  fontSize: ManagerFontSizes.s20,
+                                  // fontFamily: Translationsz1.getlang(lang1)
+                                ),
+                              ),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+
+                              disabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange)),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: ManagerColors.green)),
+                              enabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: ManagerColors.black95))),
+
+                          //   ),
+
+                          items: addcardcontroller.cards
+                              .map((item) => DropdownMenuItem<String>(
+                            value: item,
+                            child: Text(
+
+                              item!,
+                              style: const TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ))
+                              .toList(),
+
+                          validator: (value) {
+                            if (value == null) {
+                              return 'Please select gender.';
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            //Do something when selected item is changed.
+                          },
+                          onSaved: (value) {
+
+                            addcardcontroller.cardselect = value.toString();
+                          },
+                          buttonStyleData:  const ButtonStyleData(
+                              padding: EdgeInsets.only(right: 8),
+                              decoration: BoxDecoration(
+
+                              )
+
+                          ),
+                          iconStyleData: const IconStyleData(
+                            icon: Icon(
+                              Icons.expand_more_sharp,
+                              color: Colors.black,
+                            ),
+                            iconSize: 24,
+                          ),
+                          dropdownStyleData: DropdownStyleData(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+
+                            ),
+                          ),
+                          menuItemStyleData: const MenuItemStyleData(
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                          ),
+
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        TextFormFieldcustom2(
+                          controller: addcardcontroller.name,
+                          validator: (val) {
+                            return validator(val!, 15, "name");
+                          },
+                          tital: ManagerStrings.CardNum,
+                          hint: "9988",
+
+
+                          obscureText: false,
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        TextFormFieldcustom2(
+                          controller: addcardcontroller.name,
+                          validator: (val) {
+                            return validator(val!, 15, "name");
+                          },
+                          tital: ManagerStrings.ExpDate,
+                          hint: "01/25",
+
+                          obscureText: false,
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        TextFormFieldcustom2(
+                          controller: addcardcontroller.name,
+                          validator: (val) {
+                            return validator(val!, 15, "name");
+                          },
+                          tital: ManagerStrings.Cvv,
+                          hint: "999",
+
+                          obscureText: false,
+                        ),
+                        const SizedBox(
+                          height: 35,
+                        ),
+                      ],
+                    )),
+
+                ButtomPrimary(tital:ManagerStrings.Save,onPressed: (){},)
               ],
-            ))
+            ),
           ],
-        ),
+        )
       ),
     );
   }

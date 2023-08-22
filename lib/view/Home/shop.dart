@@ -39,6 +39,7 @@ class Shop extends StatelessWidget {
               indexSelected: shopController.visit,
               onTap: (i) {
                 shopController.getdata(i);
+                shopController.gotopag();
               },
               itemss: BottomBarFloatinn.items,
             ),

@@ -40,686 +40,669 @@ class Profile extends StatelessWidget {
         indexSelected: profilecontroller.visit,
         onTap: (int) {
           profilecontroller.getdata(int);
+          profilecontroller.gotopag();
+
         },
         itemss: BottomBarFloatinn.items,
       ),
       body: Container(
         padding: EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 20),
-        child: Column(
-          children: [
-            Container(
-              height: 200,
-              width: 389,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                children: [
-                  Container(
-                      margin: EdgeInsetsDirectional.only(top: 8),
-                      child: Image(
-                          image: AssetImage("assets/profile/profile.png"))),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    ManagerStrings.name,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: ManagerFont.quicksand,
-                        fontSize: 16),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  MaterialButton(
-                    height: 35,
-                    minWidth: 76,
-                    onPressed: () {
-                      profilecontroller.gotoedit();
-                    },
-                    child: Text("edit"),
-                    color: ManagerColors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+        child : SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                width: 389,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                        margin: EdgeInsetsDirectional.only(top: 8),
+                        child: Image(
+                            image: AssetImage("assets/profile/profile.png"))),
+                    SizedBox(
+                      height: 15,
                     ),
-                  )
-                ],
+                    Text(
+                      ManagerStrings.name,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: ManagerFont.quicksand,
+                          fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    MaterialButton(
+                      height: 35,
+                      minWidth: 76,
+                      onPressed: () {
+                        profilecontroller.gotoedit();
+                      },
+                      child: Text("edit"),
+                      color: ManagerColors.green,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            // Container(
-            //   height: 72,
-            //   width: 387,
-            //   child: const ListTile(
-            //     title: Text(
-            //       "Payment Methods",
-            //       style: TextStyle(
-            //           fontSize: ManagerFontSizes.s18,
-            //           fontFamily: ManagerFont.quicksand),
-            //     ),
-            //     leading: Image(image: AssetImage("assets/profile/card.png")),
-            //     subtitle:  Text(
-            //       "Add your credit & debit cards",
-            //       style: TextStyle(
-            //           fontSize: ManagerFontSizes.s15,
-            //           fontFamily: ManagerFont.quicksand),
-            //     ),
-            //   ),
-            // )
-            Spacer(),
-            const SizedBox(
-              height: 15,
-            ),
-            Container(
-              width: 387,
-              height: 72,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+              const SizedBox(
+                height: 15,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.64,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                  Positioned(
-                                    left: 3.81,
-                                    top: 2.17,
-                                    child:
-                                        Image.asset("assets/profile/card.png"),
-                                  ),
-                                ],
+              Container(
+                width: 387,
+                height: 72,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 16,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.64,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                    Positioned(
+                                      left: 3.81,
+                                      top: 2.17,
+                                      child:
+                                      Image.asset("assets/profile/card.png"),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 344.07,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.84,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                ],
+                    Positioned(
+                      left: 344.07,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.84,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 16,
-                    child: SizedBox(
-                      width: 176,
-                      child: Text(
-                        'Payment Methods',
-                        style: TextStyle(
-                          color: Color(0xFF1B1D21),
-                          fontSize: 16,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w700,
-                          height: 1.12,
+                    const Positioned(
+                      left: 58,
+                      top: 16,
+                      child: SizedBox(
+                        width: 176,
+                        child: Text(
+                          'Payment Methods',
+                          style: TextStyle(
+                            color: Color(0xFF1B1D21),
+                            fontSize: 16,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            height: 1.12,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 39,
-                    child: SizedBox(
-                      width: 224,
-                      child: Text(
-                        'Add your credit & debit cards',
-                        style: TextStyle(
-                          color: Colors.black.withOpacity(0.5),
-                          fontSize: 14,
-                          fontFamily: ManagerFont.SemiBold,
-                          fontWeight: FontWeight.w500,
-                          height: 1.29,
+                    Positioned(
+                      left: 58,
+                      top: 39,
+                      child: SizedBox(
+                        width: 224,
+                        child: Text(
+                          'Add your credit & debit cards',
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14,
+                            fontFamily: ManagerFont.SemiBold,
+                            fontWeight: FontWeight.w500,
+                            height: 1.29,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                      right: 10,
-                      top: 25,
-                      child: Container(
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ))
-                ],
+                    Positioned(
+                        right: 10,
+                        top: 25,
+                        child: Container(
+                          child: Icon(Icons.arrow_forward_ios_rounded),
+                        ))
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: 387,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+              const SizedBox(
+                height: 10,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.64,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                  Positioned(
-                                    left: 3.81,
-                                    top: 2.17,
-                                    child: Image.asset(
-                                        "assets/profile/marker.png"),
-                                  ),
-                                ],
+              Container(
+                width: 387,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 16,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.64,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                    Positioned(
+                                      left: 3.81,
+                                      top: 2.17,
+                                      child: Image.asset(
+                                          "assets/profile/marker.png"),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 344.07,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.84,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                ],
+                    Positioned(
+                      left: 344.07,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.84,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 16,
-                    child: SizedBox(
-                      width: 176,
-                      child: Text(
-                        'Location',
-                        style: TextStyle(
-                          color: Color(0xFF1B1D21),
-                          fontSize: 16,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w700,
-                          height: 1.12,
+                    const Positioned(
+                      left: 58,
+                      top: 16,
+                      child: SizedBox(
+                        width: 176,
+                        child: Text(
+                          'Location',
+                          style: TextStyle(
+                            color: Color(0xFF1B1D21),
+                            fontSize: 16,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            height: 1.12,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 39,
-                    child: SizedBox(
-                      width: 224,
-                      child: Text(
-                        'Add your Home Location ',
-                        style: TextStyle(
-                          color: Colors.black.withOpacity(0.5),
-                          fontSize: 14,
-                          fontFamily: ManagerFont.SemiBold,
-                          fontWeight: FontWeight.w500,
-                          height: 1.29,
+                    Positioned(
+                      left: 58,
+                      top: 39,
+                      child: SizedBox(
+                        width: 224,
+                        child: Text(
+                          'Add your Home Location ',
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14,
+                            fontFamily: ManagerFont.SemiBold,
+                            fontWeight: FontWeight.w500,
+                            height: 1.29,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                      right: 10,
-                      top: 25,
-                      child: Container(
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ))
-                ],
+                    Positioned(
+                        right: 10,
+                        top: 25,
+                        child: Container(
+                          child: Icon(Icons.arrow_forward_ios_rounded),
+                        ))
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: 387,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+              const SizedBox(
+                height: 10,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.64,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                  Positioned(
-                                    left: 3.81,
-                                    top: 2.17,
-                                    child: Image.asset(
-                                        "assets/profile/notify.png"),
-                                  ),
-                                ],
+              Container(
+                width: 387,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 16,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.64,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                    Positioned(
+                                      left: 3.81,
+                                      top: 2.17,
+                                      child: Image.asset(
+                                          "assets/profile/notify.png"),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 344.07,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.84,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                ],
+                    Positioned(
+                      left: 344.07,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.84,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 16,
-                    child: SizedBox(
-                      width: 176,
-                      child: Text(
-                        'Payment Methods',
-                        style: TextStyle(
-                          color: Color(0xFF1B1D21),
-                          fontSize: 16,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w700,
-                          height: 1.12,
+                    const Positioned(
+                      left: 58,
+                      top: 16,
+                      child: SizedBox(
+                        width: 176,
+                        child: Text(
+                          'Payment Methods',
+                          style: TextStyle(
+                            color: Color(0xFF1B1D21),
+                            fontSize: 16,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            height: 1.12,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 39,
-                    child: SizedBox(
-                      width: 224,
-                      child: Text(
-                        'Add your credit & debit cards',
-                        style: TextStyle(
-                          color: Colors.black.withOpacity(0.5),
-                          fontSize: 14,
-                          fontFamily: ManagerFont.SemiBold,
-                          fontWeight: FontWeight.w500,
-                          height: 1.29,
+                    Positioned(
+                      left: 58,
+                      top: 39,
+                      child: SizedBox(
+                        width: 224,
+                        child: Text(
+                          'Add your credit & debit cards',
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14,
+                            fontFamily: ManagerFont.SemiBold,
+                            fontWeight: FontWeight.w500,
+                            height: 1.29,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                      right: 10,
-                      top: 25,
-                      child: Container(child: GetBuilder<porfileController>(
-                        builder: (controller) {
-                          return FlutterSwitch(
-                            activeColor: ManagerColors.green,
-                            height: 24,
-                            width: 46,
-                            valueFontSize: 24,
-                            value: profilecontroller.valueSwitsh,
-                            onToggle: (bool value) {
-                              profilecontroller.getdataSwitsh(value);
-                            },
-                          );
-                        },
-                      )))
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: 387,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.64,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
+                    Positioned(
+                        right: 10,
+                        top: 25,
+                        child: Container(child: GetBuilder<porfileController>(
+                          builder: (controller) {
+                            return FlutterSwitch(
+                              activeColor: ManagerColors.green,
                               height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                  Positioned(
-                                    left: 3.81,
-                                    top: 2.17,
-                                    child: Image.asset(
-                                        "assets/profile/Calling.png"),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 344.07,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.84,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 16,
-                    child: SizedBox(
-                      width: 176,
-                      child: Text(
-                        'Contact Us',
-                        style: TextStyle(
-                          color: Color(0xFF1B1D21),
-                          fontSize: 16,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w700,
-                          height: 1.12,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 39,
-                    child: SizedBox(
-                      width: 224,
-                      child: Text(
-                        'For daily update and others',
-                        style: TextStyle(
-                          color: Colors.black.withOpacity(0.5),
-                          fontSize: 14,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w500,
-                          height: 1.29,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                      right: 10,
-                      top: 25,
-                      child: Container(
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ))
-                ],
+                              width: 46,
+                              valueFontSize: 24,
+                              value: profilecontroller.valueSwitsh,
+                              onToggle: (bool value) {
+                                profilecontroller.getdataSwitsh(value);
+                              },
+                            );
+                          },
+                        )))
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              width: 387,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+              const SizedBox(
+                height: 10,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.64,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                  Positioned(
-                                    left: 3.81,
-                                    top: 2.17,
-                                    child: Image.asset(
-                                        "assets/profile/Logout.png"),
-                                  ),
-                                ],
+              Container(
+                width: 387,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 16,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.64,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                    Positioned(
+                                      left: 3.81,
+                                      top: 2.17,
+                                      child: Image.asset(
+                                          "assets/profile/Calling.png"),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 344.07,
-                    top: 24,
-                    child: Opacity(
-                      opacity: 0.84,
-                      child: Container(
-                        width: 24.93,
-                        height: 24,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 24.93,
-                              height: 24,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    left: 0,
-                                    top: 0,
-                                    child: Container(width: 24.93, height: 24),
-                                  ),
-                                ],
+                    Positioned(
+                      left: 344.07,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.84,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 58,
-                    top: 28,
-                    child: SizedBox(
-                      width: 176,
-                      child: Text(
-                        'Logout',
-                        style: TextStyle(
-                          color: Color(0xFF1B1D21),
-                          fontSize: 16,
-                          fontFamily: 'Quicksand',
-                          fontWeight: FontWeight.w700,
-                          height: 1.12,
+                    const Positioned(
+                      left: 58,
+                      top: 16,
+                      child: SizedBox(
+                        width: 176,
+                        child: Text(
+                          'Contact Us',
+                          style: TextStyle(
+                            color: Color(0xFF1B1D21),
+                            fontSize: 16,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            height: 1.12,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                      right: 10,
-                      top: 25,
-                      child: Container(
-                        child: Icon(Icons.arrow_forward_ios_rounded),
-                      ))
-                ],
+                    Positioned(
+                      left: 58,
+                      top: 39,
+                      child: SizedBox(
+                        width: 224,
+                        child: Text(
+                          'For daily update and others',
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w500,
+                            height: 1.29,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        right: 10,
+                        top: 25,
+                        child: Container(
+                          child: Icon(Icons.arrow_forward_ios_rounded),
+                        ))
+                  ],
+                ),
               ),
-            ),
-            Spacer(),
-          ],
-        ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: 387,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 16,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.64,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                    Positioned(
+                                      left: 3.81,
+                                      top: 2.17,
+                                      child: Image.asset(
+                                          "assets/profile/Logout.png"),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 344.07,
+                      top: 24,
+                      child: Opacity(
+                        opacity: 0.84,
+                        child: Container(
+                          width: 24.93,
+                          height: 24,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 24.93,
+                                height: 24,
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: Container(width: 24.93, height: 24),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      left: 58,
+                      top: 28,
+                      child: SizedBox(
+                        width: 176,
+                        child: Text(
+                          'Logout',
+                          style: TextStyle(
+                            color: Color(0xFF1B1D21),
+                            fontSize: 16,
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w700,
+                            height: 1.12,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        right: 10,
+                        top: 25,
+                        child: Container(
+                          child: Icon(Icons.arrow_forward_ios_rounded),
+                        ))
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ),
     );
   }

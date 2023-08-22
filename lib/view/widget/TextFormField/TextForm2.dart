@@ -6,24 +6,22 @@ import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_strings.dart';
 
-class TextFormFieldcustom extends StatelessWidget {
+class TextFormFieldcustom2 extends StatelessWidget {
   String tital;
 
   String hint;
-  Widget Iconn;
+
   bool obscureText;
   TextEditingController? controller;
 
   String? Function(String?)? validator;
 
-  TextFormFieldcustom(
-
+  TextFormFieldcustom2(
       {required this.tital,
-      required this.hint,
-        required this.Iconn,
-      required this.obscureText,
-      required this.validator,
-      required this.controller,
+        required this.hint,
+        required this.obscureText,
+        required this.validator,
+        required this.controller,
       });
 
   @override
@@ -49,7 +47,7 @@ class TextFormFieldcustom extends StatelessWidget {
             ),
           ),
           floatingLabelBehavior: FloatingLabelBehavior.always,
-          suffixIcon: Iconn,
+
           disabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.deepOrange)),
           border: OutlineInputBorder(

@@ -20,7 +20,7 @@ class ButtomPrimary extends StatelessWidget {
   late void Function()? onPressed;
   String lang = Translationsz.getlanguage(Get.deviceLocale!.languageCode);
 
-  ButtomPrimary({this.onPressed, this.mtop, this.bottom, required this.tital});
+  ButtomPrimary({required this.onPressed, this.mtop, this.bottom, required this.tital});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 class ManagerStrings {
-  static const String appName = 'Shop App';
+ static const String appName = 'Shop App';
   static const String aboutScreen = 'About Screen';
   static const String EasyProcess = "Easy Process";
   static const String sube2 =
@@ -68,5 +68,9 @@ Need a Helping Hand Today?''';
   static const String  AddCard=  "Add Card";
   static const String  CardName=  "Card Name";
   static const String  Cardtype=  "Card type";
+  static const String  CardNum=  "Card Num";
+  static const String  ExpDate=  "Exp Date";
+  static const String  Cvv=  "Cvv";
+  static const String  Save=  "Save";
 
 }

@@ -11,7 +11,6 @@ class HomeControlle extends GetxController{
 
       getdata(int index ){
         visit = index;
-        update();
       }
       zon(int index){
 
@@ -34,6 +33,11 @@ class HomeControlle extends GetxController{
     }
     if(visit==2){
       Get.toNamed(ManagerRoutes.Shop);
+      update();
+      visit=0;
+    }
+    if(visit==1){
+      Get.toNamed(ManagerRoutes.cart);
       update();
       visit=0;
     }
