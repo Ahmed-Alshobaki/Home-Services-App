@@ -1,28 +1,29 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../core/constant/icon/my_flutter_app_icons.dart';
+
 class BottomBarFloatinn extends StatelessWidget {
     int indexSelected = 0;
     Function(int)? onTap;
     List<TabItem<dynamic>>? itemss;
    static List<TabItem> items = [
-      TabItem(
+      const TabItem(
         icon: Icons.home_outlined,
-        title: 'Home',
-      ),
+        title: "Home"
 
-
-      TabItem(
-        icon: Icons.shopping_cart_outlined,
-        title: 'Cart',
       ),
-      TabItem(
-        icon: Icons.space_dashboard_outlined,
-        title: 'Shop',
+      const TabItem(
+        icon:MyFlutterApp.doc_text,
+          title: "History"
       ),
-      TabItem(
+      const TabItem(
+        icon: MyFlutterApp.th_thumb_empty,
+          title: "Categories"
+      ),
+      const TabItem(
         icon: Icons.person_2_outlined,
-        title: 'profile',
+          title: "Person"
       ),
     ];
    BottomBarFloatinn({super.key,required this.indexSelected ,required this.onTap,required this.itemss});

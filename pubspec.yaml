@@ -73,6 +73,7 @@ dependencies:
   awesome_bottom_bar: ^1.2.4
   flutter_switch: ^0.3.2
   dropdown_button2: ^2.3.8
+  contained_tab_bar_view: ^0.8.0
 
 
 dev_dependencies:
@@ -110,6 +111,7 @@ flutter:
     - assets/editProfile/
 
 
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -134,6 +136,9 @@ flutter:
     - family: din
       fonts:
         - asset: font/fontArbic/din-next-lt-w23-regular.ttf
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/icon/MyFlutterApp.ttf
 
 
   #       - asset: fonts/Schyler-Italic.ttf
