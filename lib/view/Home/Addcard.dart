@@ -1,8 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop/view/test.dart';
-
 import '../../controlle/addCard/addcard.dart';
 import '../../core/functions/validator.dart';
 import '../../core/resources/manager_colors.dart';
@@ -11,8 +9,6 @@ import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
 import '../widget/Buttom/Buttomprimary.dart';
 import '../widget/TextFormField/TextForm2.dart';
-import '../widget/TextFormField/TextFormFieldcustom.dart';
-
 class Addcard extends StatelessWidget {
   Addcard({super.key});
 
@@ -70,8 +66,8 @@ class Addcard extends StatelessWidget {
                               hintText: "Visa",
                               fillColor: ManagerColors.greenfath,
                               filled: true,
-                              contentPadding: const EdgeInsetsDirectional.symmetric(
-                                  vertical: 14, horizontal: 16),
+                              contentPadding:  const EdgeInsetsDirectional.symmetric(
+                                  vertical: 14, horizontal: 14),
                               label: const Text(
                                 "Card type",
                                 style: TextStyle(
@@ -98,7 +94,6 @@ class Addcard extends StatelessWidget {
                               .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
-
                               item!,
                               style: const TextStyle(
                                 fontSize: 14,
@@ -141,7 +136,7 @@ class Addcard extends StatelessWidget {
                             ),
                           ),
                           menuItemStyleData: const MenuItemStyleData(
-                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            padding: EdgeInsets.symmetric(horizontal: 1),
                           ),
 
                         ),
