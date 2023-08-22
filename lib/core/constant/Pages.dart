@@ -6,10 +6,9 @@ import '../../view/Auth/SingUp/singup.dart';
 import '../../view/Auth/login/Login.dart';
 import '../../view/Auth/verifycodeReset/verifycode.dart';
 import '../../view/Auth/verifycodeResetSingup/verifycode.dart';
-import '../../view/History/History.dart';
+import '../../view/profile/History.dart';
 import '../../view/Home/Addcard.dart';
 import '../../view/Home/Home.dart';
-import '../../view/Home/cart.dart';
 import '../../view/profile/editprofile.dart';
 import '../../view/profile/profile.dart';
 import '../../view/Home/shop.dart';
@@ -38,7 +37,7 @@ class Pages {
     GetPage(name: ManagerRoutes.Editprofile, page: () => Editprofile()),
     GetPage(name: ManagerRoutes.History, page: () => History()),
     GetPage(name: ManagerRoutes.Addcard, page: () => Addcard()),
-    GetPage(name: ManagerRoutes.cart, page: () => Cart()),
+
 
   ];
 

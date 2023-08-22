@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/view/Auth/SingUp/singup.dart';
 import 'package:shop/view/Auth/login/Login.dart';
-import 'package:shop/view/History/History.dart';
+import 'package:shop/view/profile/History.dart';
 import 'package:shop/view/Home/Addcard.dart';
 import 'package:shop/view/Home/Home.dart';
 import 'package:shop/view/profile/profile.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: Home(),
+      home: History(),
       theme: ThemeData(
           useMaterial3: true,
           colorScheme:

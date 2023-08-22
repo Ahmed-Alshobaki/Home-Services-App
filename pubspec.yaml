@@ -109,6 +109,7 @@ flutter:
     - assets/profile/
     - assets/LanguageApp/
     - assets/editProfile/
+    - assets/History/
 
 
 
@@ -136,9 +137,9 @@ flutter:
     - family: din
       fonts:
         - asset: font/fontArbic/din-next-lt-w23-regular.ttf
-    - family: MyFlutterApp
+    - family: Home
       fonts:
-        - asset: assets/icon/MyFlutterApp.ttf
+        - asset: assets/icon/Home.ttf
 
 
   #       - asset: fonts/Schyler-Italic.ttf
