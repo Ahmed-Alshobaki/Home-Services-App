@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 class Addcardcontroller extends GetxController{
 
 
-  TextEditingController email = new TextEditingController();
-  TextEditingController password = new TextEditingController();
-  TextEditingController name = new TextEditingController();
+  TextEditingController CardName = new TextEditingController();
+  TextEditingController CardType = new TextEditingController();
+  TextEditingController CardNum = new TextEditingController();
+  TextEditingController ExpDate = new TextEditingController();
+  TextEditingController Cvv = new TextEditingController();
   GlobalKey<FormState> key = GlobalKey<FormState>();
   List<String?> cards = ["Visa","MasterCard","Discover",];
   String? cardselect = "Visa";

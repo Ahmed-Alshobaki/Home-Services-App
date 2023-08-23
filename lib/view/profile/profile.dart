@@ -63,17 +63,17 @@ class Profile extends StatelessWidget {
                         margin: EdgeInsetsDirectional.only(top: 8),
                         child: Image(
                             image: AssetImage("assets/profile/profile.png"))),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    Text(
+                    const Text(
                       ManagerStrings.name,
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: ManagerFont.quicksand,
                           fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     MaterialButton(
@@ -191,16 +191,21 @@ class Profile extends StatelessWidget {
                     Positioned(
                       left: 58,
                       top: 39,
-                      child: SizedBox(
-                        width: 224,
-                        child: Text(
-                          'Add your credit & debit cards',
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.5),
-                            fontSize: 14,
-                            fontFamily: ManagerFont.SemiBold,
-                            fontWeight: FontWeight.w500,
-                            height: 1.29,
+                      child: InkWell(
+                        onTap: (){
+                          profilecontroller.gotoPayment();
+                        },
+                        child: SizedBox(
+                          width: 224,
+                          child: Text(
+                            'Add your credit & debit cards',
+                            style: TextStyle(
+                              color: Colors.black.withOpacity(0.5),
+                              fontSize: 14,
+                              fontFamily: ManagerFont.SemiBold,
+                              fontWeight: FontWeight.w500,
+                              height: 1.29,
+                            ),
                           ),
                         ),
                       ),
@@ -314,16 +319,21 @@ class Profile extends StatelessWidget {
                     Positioned(
                       left: 58,
                       top: 39,
-                      child: SizedBox(
-                        width: 224,
-                        child: Text(
-                          'Add your Home Location ',
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.5),
-                            fontSize: 14,
-                            fontFamily: ManagerFont.SemiBold,
-                            fontWeight: FontWeight.w500,
-                            height: 1.29,
+                      child: InkWell(
+                        onTap: (){
+
+                        },
+                        child: SizedBox(
+                          width: 224,
+                          child: Text(
+                            'Add your Home Location ',
+                            style: TextStyle(
+                              color: Colors.black.withOpacity(0.5),
+                              fontSize: 14,
+                              fontFamily: ManagerFont.SemiBold,
+                              fontWeight: FontWeight.w500,
+                              height: 1.29,
+                            ),
                           ),
                         ),
                       ),

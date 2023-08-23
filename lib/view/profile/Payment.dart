@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 
+import '../../controlle/Payment/Payment.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
 
 
 class Payment extends StatelessWidget {
-  const Payment({super.key});
-
+   Payment({super.key});
+  ControllerPayment  controllerPayment = Get.put(ControllerPayment());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,15 +39,15 @@ class Payment extends StatelessWidget {
               children: [
                 Image.asset("assets/payment/card.png"),
                 Image.asset("assets/payment/card2.png"),
-               const SizedBox(height: 100,),
+               const SizedBox(height: 120,),
 
                InkWell(
                  onTap: (){
-
+                   controllerPayment.gotoAddCard();
                  },
                  child: Container(
                    width: 310,
-                   height: 60,
+                   height: 58,
                    decoration: BoxDecoration(
                      borderRadius: BorderRadius.circular(10),
                      color: ManagerColors.green,

@@ -9,6 +9,7 @@ import '../../view/Auth/verifycodeResetSingup/verifycode.dart';
 import '../../view/History/History.dart';
 import '../../view/profile/Addcard.dart';
 import '../../view/Home/Home.dart';
+import '../../view/profile/Payment.dart';
 import '../../view/profile/editprofile.dart';
 import '../../view/profile/profile.dart';
 import '../../view/Home/shop.dart';
@@ -36,6 +37,8 @@ class Pages {
     GetPage(name: ManagerRoutes.Profile, page: () => Profile()),
     GetPage(name: ManagerRoutes.Editprofile, page: () => Editprofile()),
     GetPage(name: ManagerRoutes.History, page: () => History()),
+    GetPage(name: ManagerRoutes.Addcard, page: () => Addcard()),
+    GetPage(name: ManagerRoutes.Payment, page: () => Payment()),
     GetPage(name: ManagerRoutes.Addcard, page: () => Addcard()),
 
 

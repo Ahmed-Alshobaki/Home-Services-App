@@ -36,4 +36,8 @@ class porfileController extends GetxController{
       visit=3;
     }
   }
+  
+  gotoPayment(){
+    Get.toNamed(ManagerRoutes.Payment);
+  }
 }

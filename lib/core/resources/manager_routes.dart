@@ -20,6 +20,7 @@ class ManagerRoutes {
   static const History = "/History";
   static const Addcard = "/Addcard";
   static const cart = "/cart";
+  static const Payment = "/Payment";
 
 
 }

@@ -48,7 +48,7 @@ class Addcard extends StatelessWidget {
                           height: 30,
                         ),
                         TextFormFieldcustom2(
-                          controller: addcardcontroller.name,
+                          controller: addcardcontroller.CardName,
                           validator: (val) {
                             return validator(val!, 15, "name");
                           },
@@ -130,8 +130,10 @@ class Addcard extends StatelessWidget {
                             iconSize: 24,
                           ),
                           dropdownStyleData: DropdownStyleData(
+
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
+                              color: Colors.white
 
                             ),
                           ),
@@ -144,7 +146,7 @@ class Addcard extends StatelessWidget {
                           height: 25,
                         ),
                         TextFormFieldcustom2(
-                          controller: addcardcontroller.name,
+                          controller: addcardcontroller.CardNum,
                           validator: (val) {
                             return validator(val!, 15, "name");
                           },
@@ -158,7 +160,7 @@ class Addcard extends StatelessWidget {
                           height: 25,
                         ),
                         TextFormFieldcustom2(
-                          controller: addcardcontroller.name,
+                          controller: addcardcontroller.ExpDate,
                           validator: (val) {
                             return validator(val!, 15, "name");
                           },
@@ -171,7 +173,7 @@ class Addcard extends StatelessWidget {
                           height: 25,
                         ),
                         TextFormFieldcustom2(
-                          controller: addcardcontroller.name,
+                          controller: addcardcontroller.Cvv,
                           validator: (val) {
                             return validator(val!, 15, "name");
                           },
