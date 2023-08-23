@@ -21,6 +21,7 @@ class ManagerRoutes {
   static const Addcard = "/Addcard";
   static const cart = "/cart";
   static const Payment = "/Payment";
-
+  // Categories
+  static const Categories = "/Categories";
 
 }

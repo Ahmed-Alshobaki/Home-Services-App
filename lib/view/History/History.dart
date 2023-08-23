@@ -38,7 +38,7 @@ class History extends StatelessWidget {
         builder: (controller) {
           return BottomBarFloatinn(indexSelected: historycontrolle.visit,onTap: (i){
             historycontrolle.getdata(i);
-            print(i);
+            historycontrolle.gotopag();
           },itemss:BottomBarFloatinn.items ,);
 
         },

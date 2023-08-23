@@ -20,18 +20,18 @@ class porfileController extends GetxController{
   }
   gotopag(){
     if(visit==0){
-      Get.toNamed(ManagerRoutes.Home);
+      Get.offNamed(ManagerRoutes.Home);
       update();
       visit=3;
     }
 
     if(visit==2){
-      Get.toNamed(ManagerRoutes.Shop);
+      Get.offNamed(ManagerRoutes.Categories);
       update();
       visit=3;
     }
     if(visit==1){
-      Get.toNamed(ManagerRoutes.cart);
+      Get.offNamed(ManagerRoutes.History);
       update();
       visit=3;
     }

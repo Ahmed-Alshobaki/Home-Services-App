@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/controlle/Home/Home.dart';
 import 'package:shop/core/resources/manager_colors.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 import 'package:shop/core/resources/manager_strings.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../widget/Buttom/BottomBarFloating.dart';
@@ -143,13 +144,18 @@ class Home extends StatelessWidget {
                           color: ManagerColors.black),
                     ),
                     Spacer(),
-                    Text(
-                      ManagerStrings.SeeALL,
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: ManagerFont.quicksand,
-                          color: ManagerColors.green),
+                    InkWell(
+                      onTap: (){
+                        Get.offNamed(ManagerRoutes.Categories);
+                      },
+                      child: Text(
+                        ManagerStrings.SeeALL,
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: ManagerFont.quicksand,
+                            color: ManagerColors.green),
+                      ),
                     ),
                   ],
                 ),

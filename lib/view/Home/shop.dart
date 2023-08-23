@@ -6,8 +6,8 @@ import 'package:shop/core/resources/manager_strings.dart';
 import '../../controlle/Shop/Shop.dart';
 import '../widget/Buttom/BottomBarFloating.dart';
 
-class Shop extends StatelessWidget {
-  Shop({super.key});
+class Categories extends StatelessWidget {
+  Categories({super.key});
 
   ShopController shopController = Get.put(ShopController());
 

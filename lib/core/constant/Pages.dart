@@ -33,14 +33,14 @@ class Pages {
     GetPage(name: ManagerRoutes.ResetPassword, page: () => ResetPassword()),
     GetPage(name: ManagerRoutes.VerifyCodeSingup, page: () => VerifyCodeSingup()),
     GetPage(name: ManagerRoutes.Home, page: () => Home()),
-    GetPage(name: ManagerRoutes.Shop, page: () => Shop()),
     GetPage(name: ManagerRoutes.Profile, page: () => Profile()),
     GetPage(name: ManagerRoutes.Editprofile, page: () => Editprofile()),
-    GetPage(name: ManagerRoutes.History, page: () => History()),
+
     GetPage(name: ManagerRoutes.Addcard, page: () => Addcard()),
     GetPage(name: ManagerRoutes.Payment, page: () => Payment()),
-    GetPage(name: ManagerRoutes.Addcard, page: () => Addcard()),
 
+    GetPage(name: ManagerRoutes.Categories, page: () => Categories()),
+    GetPage(name: ManagerRoutes.History, page: () => History()),
 
   ];
 

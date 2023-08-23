@@ -23,7 +23,7 @@ class ShopController extends GetxController{
       visit=2;
     }
     if(visit==1){
-      Get.toNamed(ManagerRoutes.cart);
+      Get.toNamed(ManagerRoutes.History);
       update();
       visit=2;
     }
