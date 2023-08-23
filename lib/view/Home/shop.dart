@@ -4,7 +4,7 @@ import 'package:shop/core/resources/manager_fonts.dart';
 import 'package:shop/core/resources/manager_strings.dart';
 
 import '../../controlle/Shop/Shop.dart';
-import '../widget/BottomBarFloating.dart';
+import '../widget/Buttom/BottomBarFloating.dart';
 
 class Shop extends StatelessWidget {
   Shop({super.key});

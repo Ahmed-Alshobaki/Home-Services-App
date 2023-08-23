@@ -9,7 +9,7 @@ import 'package:shop/controlle/Home/Home.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_strings.dart';
 import '../../core/resources/manager_fonts.dart';
-import '../widget/BottomBarFloating.dart';
+import '../widget/Buttom/BottomBarFloating.dart';
 class Home extends StatelessWidget {
   Home({super.key});
 

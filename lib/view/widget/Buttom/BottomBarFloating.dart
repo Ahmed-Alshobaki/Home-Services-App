@@ -1,7 +1,7 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/constant/icon/home_icons.dart';
+import '../../../core/constant/icon/home_icons.dart';
 
 
 class BottomBarFloatinn extends StatelessWidget {

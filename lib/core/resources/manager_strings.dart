@@ -72,5 +72,7 @@ Need a Helping Hand Today?''';
   static const String  ExpDate=  "Exp Date";
   static const String  Cvv=  "Cvv";
   static const String  Save=  "Save";
+ static const String  Payment=  "Payment";
+
 
 }

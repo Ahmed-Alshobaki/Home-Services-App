@@ -6,7 +6,7 @@ import 'package:shop/core/resources/manager_colors.dart';
 import '../../controlle/History/HistoryControlle.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
-import '../widget/BottomBarFloating.dart';
+import '../widget/Buttom/BottomBarFloating.dart';
 
 class History extends StatelessWidget {
   const History({super.key});

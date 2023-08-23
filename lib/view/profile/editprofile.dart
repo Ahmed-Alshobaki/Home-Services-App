@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../../controlle/editprofile/Editprofile.dart';
 import '../../core/functions/validator.dart';
-import '../../core/resources/manager_colors.dart';
+
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
 import '../widget/Buttom/Buttomprimary.dart';
@@ -121,7 +121,7 @@ class Editprofile extends StatelessWidget {
                       color: Color(0x1AFF0000),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Row(
+                    child: const Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

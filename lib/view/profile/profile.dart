@@ -6,7 +6,7 @@ import 'package:shop/core/resources/manager_font_sizes.dart';
 import '../../controlle/profile/porfile.dart';
 import '../../core/resources/manager_fonts.dart';
 import '../../core/resources/manager_strings.dart';
-import '../widget/BottomBarFloating.dart';
+import '../widget/Buttom/BottomBarFloating.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
 class Profile extends StatelessWidget {
