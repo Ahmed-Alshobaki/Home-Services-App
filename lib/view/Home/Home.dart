@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
                       ManagerStrings.goodmorning,
                       style: TextStyle(
                           fontSize: 17,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontFamily: ManagerFont.quicksandRegular,
                           color: ManagerColors.black),
                     ),
@@ -86,7 +86,6 @@ class Home extends StatelessWidget {
                     options: CarouselOptions(
                       onPageChanged: (i, o) {
                         control.getdataindex(i);
-                        control.gotopag();
                         print(control.indexx);
                       },
                       height: 150,
@@ -106,7 +105,8 @@ class Home extends StatelessWidget {
                       enlargeCenterPage: true,
                       enlargeFactor: 0.3,
                       scrollDirection: Axis.horizontal,
-                    )),
+                    )
+                ),
 
                 Container(
                   alignment: Alignment.center,
@@ -117,13 +117,12 @@ class Home extends StatelessWidget {
                         children: [
                           ...List.generate(
                                       3,
-                                (index) => AnimatedContainer(
+                                (index) => Container(
                               margin: EdgeInsetsDirectional.only(start: 5),
-                              duration: Duration(seconds: 500),
                               width: 8,
                               height: 8,
                               decoration: BoxDecoration(
-                                color:control.zon(index),
+                                color:control.indexx==index?Colors.green:Color(0xffD9D9D9),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
@@ -162,7 +161,7 @@ class Home extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                
+
                 Container(
 
                     height: 330,
@@ -176,7 +175,7 @@ class Home extends StatelessWidget {
                               children: [
                                 Expanded(
                                     child: Container(
-                                
+
                                   height: 200,
                                   width: double.infinity,
                                   child: const Card(
@@ -228,7 +227,7 @@ class Home extends StatelessWidget {
                             Container(
 
                               child: Row(
-                                
+
                                 children: [
                                   Expanded(
                                       child: Container(

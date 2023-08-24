@@ -11,10 +11,11 @@ class HomeControlle extends GetxController{
 
       getdata(int index ){
         visit = index;
+
       }
       zon(int index){
 
-      return  visit==index?Colors.green:Colors.black26;
+      return  indexx==index?Colors.green:Colors.black26;
       }
 
 

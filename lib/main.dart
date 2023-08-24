@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: Profile(),
+      home: Home(),
       theme: ThemeData(
           useMaterial3: true,
           colorScheme:
