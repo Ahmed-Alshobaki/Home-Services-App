@@ -141,7 +141,9 @@ flutter:
     - family: Home
       fonts:
         - asset: assets/icon/Home.ttf
-
+    - family: IconBroken
+      fonts:
+        - asset: assets/icon/icons.ttf
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

@@ -2,6 +2,7 @@ import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constant/icon/home_icons.dart';
+import '../../../core/constant/icon/icon_broken.dart';
 
 
 class BottomBarFloatinn extends StatelessWidget {
@@ -10,20 +11,20 @@ class BottomBarFloatinn extends StatelessWidget {
     List<TabItem<dynamic>>? itemss;
    static List<TabItem> items = [
       const TabItem(
-        icon: Home.home_1,
+        icon: IconBroken.Home,
         title: "Home"
 
       ),
       const TabItem(
-        icon:Home.doc_text,
+        icon:IconBroken.Document,
           title: "History"
       ),
       const TabItem(
-        icon: Home.th_thumb_empty,
+        icon: IconBroken.Category,
           title: "Categories"
       ),
       const TabItem(
-        icon: Icons.person_outline,
+        icon: IconBroken.Profile,
           title: "Person"
 
       ),
