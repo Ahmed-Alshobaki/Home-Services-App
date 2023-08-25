@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shop/core/resources/ManagerConstant.dart';
 
 import '../../core/functions/crud.dart';
@@ -19,9 +21,9 @@ class SingUpController extends GetxController {
     update();
   }
 
-  void gotoAingup() {
-    Get.toNamed(ManagerRoutes.Login);
-    update();
+  gotoLogin() {
+    Get.offNamed(ManagerRoutes.Login);
+
   }
 
   void gotoForgetPasswordpage() {
@@ -49,7 +51,7 @@ class SingUpController extends GetxController {
         email: email.text,
         password: password.text,
       );
-      Get.toNamed(ManagerRoutes.Login);
+      Get.offNamed(ManagerRoutes.Login);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         print('The password provided is too weak.');
@@ -59,5 +61,41 @@ class SingUpController extends GetxController {
     } catch (e) {
       print(e);
     }
+  }
+
+
+
+
+    signInWithGoogle() async {
+      // Trigger the authentication flow
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      if (googleUser== null) {
+        return ;
+      }
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      // Once signed in, return the UserCredential
+       await FirebaseAuth.instance.signInWithCredential(credential);
+       return Get.offNamed(ManagerRoutes.Home);
+
+  }
+  signInWithFacebook() async {
+    // Trigger the sign-in flow
+    final LoginResult loginResult = await FacebookAuth.instance.login();
+
+    // Create a credential from the access token
+    final OAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+    // Once signed in, return the UserCredential
+    FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+    return Get.offNamed(ManagerRoutes.Home);
   }
 }

@@ -5,9 +5,9 @@ import '../../../core/resources/manager_routes.dart';
 
 
 class ForgetPasswordController extends GetxController{
-  TextEditingController? email ;
+  TextEditingController? email = new TextEditingController();
 void goVerify(){
-  Get.toNamed(ManagerRoutes.VerifyCode);
+  Get.toNamed(ManagerRoutes.Login);
   update();
 }
 }

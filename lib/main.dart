@@ -14,6 +14,9 @@ import 'package:shop/view/welcome%20page/splash/splash.dart';
 import 'Localizations/welcome page/onboarding1/Translations1.dart';
 import 'core/constant/Pages.dart';
 import 'core/functions/share.dart';
+import 'view/Auth/ForgetPassword/ForgetPassword.dart';
+import 'view/Auth/ResetPassword/reset_password.dart';
+import 'view/Auth/verifycodeReset/verifycode.dart';
 import 'view/profile/Payment.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: Login(),
+      home: SingUp(),
       theme: ThemeData(
 
           colorScheme:

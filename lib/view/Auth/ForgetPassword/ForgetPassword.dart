@@ -1,5 +1,8 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 
 import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
@@ -12,6 +15,7 @@ import '../../../core/resources/manager_font_sizes.dart';
 import '../../../core/resources/manager_fonts.dart';
 import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
+import '../../widget/Dialog/Dialog.dart';
 import '../../widget/TextFormField/TextFormFieldcustom.dart';
 
 Localee Translationsz1 = Get.put(Localee());
@@ -79,8 +83,25 @@ class ForgetPassword extends StatelessWidget {
             ),
             ButtomPrimary(
               tital: ManagerStrings.Reset_Password.tr,
-              onPressed: () {
-                Controllerr.goVerify();
+              onPressed: ()async {
+                try{
+                  await FirebaseAuth.instance.sendPasswordResetEmail(email:Controllerr.email!.text );
+                  DialogA.getDialog(
+                    dismissOnTouchOutside: false,
+                      context: context,
+                      btnOkOnPress: () {
+                        Get.offNamed(ManagerRoutes.Login);
+                      },
+                      tital: 'success',
+                      desc: "A message has been sent to your email",
+                      dialogType: DialogType.success);
+                }catch(e){
+                  DialogA.getDialog(
+                      context: context,
+                      btnOkOnPress: () {},
+                      tital: "Email does not exist",
+                      dialogType: DialogType.info);
+                }
               },
             ),
           ],

@@ -63,7 +63,7 @@ class VerifyCode extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(bottom: 25, top: 35),
               child: OtpTextField(
                 focusedBorderColor: ManagerColors.green,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     fontSize: ManagerFontSizes.s20,
                     fontFamily: ManagerFont.quicksand),
                 showCursor: true,

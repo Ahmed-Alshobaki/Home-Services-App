@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_font_sizes.dart';
 import 'package:shop/core/resources/manager_routes.dart';
@@ -692,6 +693,8 @@ class Profile extends StatelessWidget {
                       child: InkWell(
                         onTap: ()async{
                           await FirebaseAuth.instance.signOut();
+                          GoogleSignIn googleSignIn = GoogleSignIn();
+                          googleSignIn.disconnect();
                           Get.offNamed(ManagerRoutes.Login);
                         },
                         child: const SizedBox(

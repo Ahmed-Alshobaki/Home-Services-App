@@ -17,10 +17,12 @@ import '../../../core/resources/manager_fonts.dart';
 import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
 import '../../widget/TextFormField/TextFormFieldcustom.dart';
-
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 class SingUp extends StatelessWidget {
   SingUp({super.key});
+
   SingUpController SingUpControllerr = Get.put(SingUpController());
+
   @override
   Widget build(BuildContext context) {
     Localee Translationsz1 = Get.put(Localee());
@@ -67,7 +69,7 @@ class SingUp extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: ManagerColors.black80,
                       fontSize: ManagerFontSizes.s20,
-                      fontFamily:ManagerFont.quicksand,
+                      fontFamily: ManagerFont.quicksand,
                     )),
               ),
               const SizedBox(
@@ -147,8 +149,8 @@ class SingUp extends StatelessWidget {
                 bottom: 10,
                 tital: ManagerStrings.Register.tr,
                 onPressed: () async {
-                 // await SingUpControllerr.gotoVerify();
-                await  SingUpControllerr.singupFirebase();
+                  // await SingUpControllerr.gotoVerify();
+                  await SingUpControllerr.singupFirebase();
                 },
               ),
               Container(
@@ -161,67 +163,78 @@ class SingUp extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Container(
-                height: 64,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: ManagerColors.greenfath,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: ManagerColors.black60)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                        height: 32,
-                        width: 32,
-                        child: const Image(
-                          image: AssetImage(ManagerAssets.Facebook),
-                          filterQuality: FilterQuality.high,
-                        )),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      ManagerStrings.Facebook.tr,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: Translationsz1.getlang(lang1),
-                          fontSize: ManagerFontSizes.s19),
-                    )
-                  ],
+              InkWell(
+                onTap: ()async {
+                await  SingUpControllerr.signInWithFacebook();
+
+                },
+                child: Container(
+                  height: 64,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: ManagerColors.greenfath,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: ManagerColors.black60)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                          height: 32,
+                          width: 32,
+                          child: const Image(
+                            image: AssetImage(ManagerAssets.Facebook),
+                            filterQuality: FilterQuality.high,
+                          )),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        ManagerStrings.Facebook.tr,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: Translationsz1.getlang(lang1),
+                            fontSize: ManagerFontSizes.s19),
+                      )
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
                 height: 13,
               ),
-              Container(
-                height: 64,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: ManagerColors.greenfath,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: ManagerColors.black60)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                        height: 32,
-                        width: 32,
-                        child: const Image(
-                          image: AssetImage(ManagerAssets.Google),
-                          filterQuality: FilterQuality.high,
-                        )),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      ManagerStrings.Google.tr,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: Translationsz1.getlang(lang1),
-                          fontSize: ManagerFontSizes.s19),
-                    ),
-                  ],
+              InkWell(
+                onTap: ()async{
+                 await SingUpControllerr.signInWithGoogle();
+                },
+                child: Container(
+                  height: 64,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: ManagerColors.greenfath,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: ManagerColors.black60)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                          height: 32,
+                          width: 32,
+                          child: const Image(
+                            image: AssetImage(ManagerAssets.Google),
+                            filterQuality: FilterQuality.high,
+                          )),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        ManagerStrings.Google.tr,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: Translationsz1.getlang(lang1),
+                            fontSize: ManagerFontSizes.s19),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
@@ -237,23 +250,19 @@ class SingUp extends StatelessWidget {
                         fontFamily: ManagerFont.SemiBold,
                         fontSize: ManagerFontSizes.s16),
                   ),
-                  GetBuilder<SingUpController>(
-                    init: SingUpController(),
-                    builder: (controller) {
-                      return InkWell(
-                        onTap: () {
-                          SingUpControllerr.gotoAingup();
-                        },
-                        child: Text(
-                          ManagerStrings.Login.tr,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: Translationsz1.getlang(lang1),
-                              fontSize: ManagerFontSizes.s16),
-                        ),
-                      );
-                    },
-                  )
+                   InkWell(
+                     onTap: (){
+                       Get.offNamed(ManagerRoutes.Login);
+                     },
+                     child: Text(
+                        ManagerStrings.Login.tr,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: Translationsz1.getlang(lang1),
+                            fontSize: ManagerFontSizes.s16),
+                      ),
+                   ),
+
                 ],
               )
             ],

@@ -23,6 +23,7 @@ class Share extends GetxService{
     }
 
     );
+
    }
 }
 
