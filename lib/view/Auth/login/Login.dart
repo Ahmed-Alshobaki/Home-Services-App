@@ -1,7 +1,9 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_assets.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 
 import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
@@ -55,7 +57,7 @@ class Login extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                       color: ManagerColors.black,
                       fontSize: ManagerFontSizes.s31,
-                      fontFamily: Translationsz1.getlang(lang1),
+                      fontFamily: ManagerFont.quicksand,
                     )),
                 const SizedBox(
                   height: 25,
@@ -69,7 +71,7 @@ class Login extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: ManagerColors.black80,
                         fontSize: ManagerFontSizes.s20,
-                        fontFamily: Translationsz1.getlang(lang1),
+                        fontFamily:  ManagerFont.quicksand,
                       )),
                 ),
                 const SizedBox(
@@ -131,7 +133,19 @@ class Login extends StatelessWidget {
                 ),
                 ButtomPrimary(
                   onPressed:()async{
-                   await LoginControlle.gohome();
+                   try {
+                     final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+                         email: LoginControlle.email.text,
+                         password: LoginControlle.password.text
+                     );
+                     Get.offNamed(ManagerRoutes.Home);
+                   } on FirebaseAuthException catch (e) {
+                     if (e.code == 'user-not-found') {
+                       print('No user found for that email.');
+                     } else if (e.code == 'wrong-password') {
+                       print('Wrong password provided for that user.');
+                     }
+                   }
 
                   },
                   tital: ManagerStrings.Login,

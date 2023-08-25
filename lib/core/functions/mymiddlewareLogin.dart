@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/functions/share.dart';
@@ -10,7 +11,7 @@ class mymiddleLogin extends GetMiddleware{
   int? get priority => 1;
   @override
   RouteSettings? redirect(String? route) {
-    if(!(Share1.zon.getString("id")==null)){
+    if(!(Share1.zon.getString("id")==null)||FirebaseAuth.instance.currentUser!=null){
       return RouteSettings(name: ManagerRoutes.Home);
     }
 

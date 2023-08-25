@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
                     options: CarouselOptions(
                       onPageChanged: (i, o) {
                         control.getdataindex(i);
-                        print(control.indexx);
+
                       },
                       height: 150,
                       aspectRatio: 16 / 9,

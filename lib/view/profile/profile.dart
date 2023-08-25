@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_colors.dart';
 import 'package:shop/core/resources/manager_font_sizes.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 
 import '../../controlle/profile/porfile.dart';
 import '../../core/resources/manager_fonts.dart';
@@ -684,21 +686,28 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Positioned(
+                     Positioned(
                       left: 58,
                       top: 28,
-                      child: SizedBox(
-                        width: 176,
-                        child: Text(
-                          'Logout',
-                          style: TextStyle(
-                            color: Color(0xFF1B1D21),
-                            fontSize: 16,
-                            fontFamily: 'Quicksand',
-                            fontWeight: FontWeight.w700,
-                            height: 1.12,
+                      child: InkWell(
+                        onTap: ()async{
+                          await FirebaseAuth.instance.signOut();
+                          Get.offNamed(ManagerRoutes.Login);
+                        },
+                        child: const SizedBox(
+                          width: 176,
+                          child: Text(
+                            'Logout',
+                            style: TextStyle(
+                              color: Color(0xFF1B1D21),
+                              fontSize: 16,
+                              fontFamily: 'Quicksand',
+                              fontWeight: FontWeight.w700,
+                              height: 1.12,
+                            ),
                           ),
                         ),
+
                       ),
                     ),
                     Positioned(

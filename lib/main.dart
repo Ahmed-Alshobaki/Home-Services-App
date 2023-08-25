@@ -10,15 +10,20 @@ import 'package:shop/view/profile/Addcard.dart';
 import 'package:shop/view/Home/Home.dart';
 import 'package:shop/view/profile/profile.dart';
 import 'package:shop/view/test.dart';
+import 'package:shop/view/welcome%20page/splash/splash.dart';
 import 'Localizations/welcome page/onboarding1/Translations1.dart';
 import 'core/constant/Pages.dart';
 import 'core/functions/share.dart';
 import 'view/profile/Payment.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Share().oninit1();
+  await Firebase.initializeApp(
+  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Share().oninit();
   runApp(MyApp());
 }
 
@@ -32,9 +37,9 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: Home(),
+      home: Splash(),
       theme: ThemeData(
-          useMaterial3: true,
+
           colorScheme:
               ThemeData().colorScheme.copyWith(primary: ManagerColors.black80),
           appBarTheme: const AppBarTheme(

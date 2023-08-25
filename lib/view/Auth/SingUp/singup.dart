@@ -1,7 +1,9 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_assets.dart';
+import 'package:shop/core/resources/manager_routes.dart';
 
 import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
@@ -47,11 +49,11 @@ class SingUp extends StatelessWidget {
             children: [
               Text((ManagerStrings.Register.tr),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w800,
                     color: ManagerColors.black,
                     fontSize: ManagerFontSizes.s31,
-                    fontFamily: Translationsz1.getlang(lang1),
+                    fontFamily: ManagerFont.quicksand,
                   )),
               const SizedBox(
                 height: 15,
@@ -61,11 +63,11 @@ class SingUp extends StatelessWidget {
                 margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
                 child: Text((ManagerStrings.Phone_and_password.tr),
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w500,
                       color: ManagerColors.black80,
                       fontSize: ManagerFontSizes.s20,
-                      fontFamily: Translationsz1.getlang(lang1),
+                      fontFamily:ManagerFont.quicksand,
                     )),
               ),
               const SizedBox(
@@ -145,7 +147,22 @@ class SingUp extends StatelessWidget {
                 bottom: 10,
                 tital: ManagerStrings.Register.tr,
                 onPressed: () async {
-                  await SingUpControllerr.gotoVerify();
+                 // await SingUpControllerr.gotoVerify();
+                  try {
+                    final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                      email: SingUpControllerr.email.text,
+                      password: SingUpControllerr.password.text,
+                    );
+                    Get.toNamed(ManagerRoutes.Login);
+                  } on FirebaseAuthException catch (e) {
+                    if (e.code == 'weak-password') {
+                      print('The password provided is too weak.');
+                    } else if (e.code == 'email-already-in-use') {
+                      print('The account already exists for that email.');
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
                 },
               ),
               Container(

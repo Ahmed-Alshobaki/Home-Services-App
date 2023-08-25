@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "273276562027",
+    "project_id": "shop-763df",
+    "storage_bucket": "shop-763df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273276562027:android:9a58f13e7fa9e3d2ed5f2e",
+        "android_client_info": {
+          "package_name": "com.ahmedzon.shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273276562027-debpq5ipv94837j2f29idce66l0u2ka4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahmedzon.shop",
+            "certificate_hash": "562a5de3deaddbc4fd2ea76f7118c65b1e6c3809"
+          }
+        },
+        {
+          "client_id": "273276562027-ohlvi6s9iobbj24cdabcbl46bot7p0oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtC2uBTetzOG2WVQkIB99SvE031-m8lSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273276562027-ohlvi6s9iobbj24cdabcbl46bot7p0oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
