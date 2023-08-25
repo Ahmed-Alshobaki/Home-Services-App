@@ -12,13 +12,13 @@ validator(String val,min,type){
       //   }
       // }
 
-
+     if (val.isEmpty) {
+       return "no Empty ";
+     }
 
 
   if (val.length<=4) {
     return ManagerStrings.characters6.tr;
   }
-     if (val.isEmpty) {
-       return ManagerStrings.characters6.tr;
-     }
+
 }

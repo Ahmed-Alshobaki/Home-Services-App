@@ -53,7 +53,7 @@ class Login extends StatelessWidget {
               children: [
                 Text((ManagerStrings.Login.tr),
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       color: ManagerColors.black,
                       fontSize: ManagerFontSizes.s31,
@@ -67,7 +67,7 @@ class Login extends StatelessWidget {
                   margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
                   child: Text((ManagerStrings.Phone_and_password.tr),
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         color: ManagerColors.black80,
                         fontSize: ManagerFontSizes.s20,
@@ -133,20 +133,7 @@ class Login extends StatelessWidget {
                 ),
                 ButtomPrimary(
                   onPressed:()async{
-                   try {
-                     final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-                         email: LoginControlle.email.text,
-                         password: LoginControlle.password.text
-                     );
-                     Get.offNamed(ManagerRoutes.Home);
-                   } on FirebaseAuthException catch (e) {
-                     if (e.code == 'user-not-found') {
-                       print('No user found for that email.');
-                     } else if (e.code == 'wrong-password') {
-                       print('Wrong password provided for that user.');
-                     }
-                   }
-
+                   await LoginControlle.gotoLogninfierbase();
                   },
                   tital: ManagerStrings.Login,
                 ),

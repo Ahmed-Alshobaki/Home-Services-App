@@ -1,4 +1,5 @@
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -46,6 +47,24 @@ class LoginController extends GetxController {
       print("object1");
       print(data);
 
+    }
+  }
+  gotoLogninfierbase()async {
+    if(globalKey.currentState!.validate()){
+
+      try {
+        final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: email.text,
+            password:password.text
+        );
+        Get.offNamed(ManagerRoutes.Home);
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'user-not-found') {
+          print('No user found for that email.');
+        } else if (e.code == 'wrong-password') {
+          print('Wrong password provided for that user.');
+        }
+      }
     }
   }
 }

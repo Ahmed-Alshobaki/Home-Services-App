@@ -148,21 +148,7 @@ class SingUp extends StatelessWidget {
                 tital: ManagerStrings.Register.tr,
                 onPressed: () async {
                  // await SingUpControllerr.gotoVerify();
-                  try {
-                    final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                      email: SingUpControllerr.email.text,
-                      password: SingUpControllerr.password.text,
-                    );
-                    Get.toNamed(ManagerRoutes.Login);
-                  } on FirebaseAuthException catch (e) {
-                    if (e.code == 'weak-password') {
-                      print('The password provided is too weak.');
-                    } else if (e.code == 'email-already-in-use') {
-                      print('The account already exists for that email.');
-                    }
-                  } catch (e) {
-                    print(e);
-                  }
+                await  SingUpControllerr.singupFirebase();
                 },
               ),
               Container(

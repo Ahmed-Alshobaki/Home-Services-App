@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: Splash(),
+      home: Login(),
       theme: ThemeData(
 
           colorScheme:
