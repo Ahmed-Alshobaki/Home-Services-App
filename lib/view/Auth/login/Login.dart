@@ -147,34 +147,39 @@ class Login extends StatelessWidget {
                 const SizedBox(
                   height: 18,
                 ),
-                Container(
-                  height: 64,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: ManagerColors.greenfath,
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: ManagerColors.black60)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                          height: 32,
-                          width: 32,
-                          child: const Image(
-                            image: AssetImage(ManagerAssets.Facebook),
-                            filterQuality: FilterQuality.high,
-                          )),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        ManagerStrings.Facebook.tr,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontFamily: Translationsz1.getlang(lang1),
-                            fontSize: ManagerFontSizes.s19),
-                      )
-                    ],
+                InkWell(
+                  onTap: (){
+                    LoginControlle.signInWithFacebook();
+                  },
+                  child: Container(
+                    height: 64,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: ManagerColors.greenfath,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: ManagerColors.black60)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            height: 32,
+                            width: 32,
+                            child: const Image(
+                              image: AssetImage(ManagerAssets.Facebook),
+                              filterQuality: FilterQuality.high,
+                            )),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          ManagerStrings.Facebook.tr,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: Translationsz1.getlang(lang1),
+                              fontSize: ManagerFontSizes.s19),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -182,7 +187,7 @@ class Login extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: (){
-                    LoginControlle.singupFirebase();
+                    LoginControlle.signInWithGoogle();
                   },
                   child: Container(
                     height: 64,

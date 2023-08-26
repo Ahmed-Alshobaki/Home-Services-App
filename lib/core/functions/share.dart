@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 class Share extends GetxService{
 
         late SharedPreferences zon ;
@@ -21,7 +21,6 @@ class Share extends GetxService{
         print('User is signed in!');
       }
     }
-
     );
 
    }
