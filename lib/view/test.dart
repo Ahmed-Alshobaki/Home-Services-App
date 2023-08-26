@@ -7,25 +7,7 @@ class test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        child: Container(
-          padding: const EdgeInsets.all(8.0),
-          color: Colors.blue,
-          width: 200,
-          height: 300,
-          child: ContainedTabBarView(
-            tabs: [
-              Text('First'),
-              Text('Second'),
-            ],
-            views: [
-              Container(color: Colors.red),
-              Container(color: Colors.green)
-            ],
-            onChange: (index) => print(index),
-          ),
-        ),
-      ) ,
+
     );
   }
 }
