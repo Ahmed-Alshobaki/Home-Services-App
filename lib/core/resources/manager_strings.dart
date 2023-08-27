@@ -73,6 +73,10 @@ Need a Helping Hand Today?''';
   static const String  Cvv=  "Cvv";
   static const String  Save=  "Save";
  static const String  Payment=  "Payment";
-
-
+ static const String  contactUs=  "contact Us";
+ static const String  contact1=  "We are pleased to contact you to hear your inquiries and opinions";
+ static const String  name1=  "Name";
+ static const String  email=  "Email";
+ static const String  Massage=  "Massage";
+ static const String  EnterYourMassage=  "EnterYourMassage";
 }

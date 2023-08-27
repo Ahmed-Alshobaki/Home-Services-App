@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:shop/core/resources/manager_fonts.dart';
 
 import '../../../Localizations/welcome page/locale/locale.dart';
 import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
@@ -38,9 +39,9 @@ class ButtomPrimary extends StatelessWidget {
           child: Text(
             tital.tr,
             style: TextStyle(
-                fontFamily: Translationsz.getlang(lang),
+                fontFamily: ManagerFont.quicksand,
                 color: ManagerColors.white,
-                fontSize: ManagerFontSizes.s18),
+                fontSize: ManagerFontSizes.s19),
           ),
         ));
   }

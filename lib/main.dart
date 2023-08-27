@@ -14,6 +14,7 @@ import 'package:shop/view/welcome%20page/splash/splash.dart';
 import 'Localizations/welcome page/onboarding1/Translations1.dart';
 import 'core/constant/Pages.dart';
 import 'core/functions/share.dart';
+import 'view/ Contact/ContactUs.dart';
 import 'view/Auth/ForgetPassword/ForgetPassword.dart';
 import 'view/Auth/ResetPassword/reset_password.dart';
 import 'view/Auth/verifycodeReset/verifycode.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
   // initialRoute: ManagerRoutes.splash,
       locale: Get.deviceLocale,
       translations: Translations1(),
-      home: SingUp(),
+      home: ContacUs(),
       theme: ThemeData(
 
           colorScheme:
