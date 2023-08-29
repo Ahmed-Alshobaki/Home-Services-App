@@ -538,7 +538,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.84,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(

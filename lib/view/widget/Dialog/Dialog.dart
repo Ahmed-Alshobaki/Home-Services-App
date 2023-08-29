@@ -14,8 +14,8 @@ class DialogA {
       animType: AnimType.topSlide,
         desc:desc ,
         title: tital,
-        titleTextStyle:TextStyle(fontFamily: ManagerFont.quicksand,fontSize: 20) ,
-         descTextStyle: TextStyle(fontFamily: ManagerFont.SemiBold),
+        titleTextStyle:const TextStyle(fontFamily: ManagerFont.quicksand,fontSize: 20) ,
+         descTextStyle: const TextStyle(fontFamily: ManagerFont.SemiBold),
       //  desc: 'Dialog description here.............',
       btnCancelOnPress: btnCancelOnPress,
 

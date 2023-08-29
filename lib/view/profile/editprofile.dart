@@ -37,7 +37,7 @@ class Editprofile extends StatelessWidget {
         ),
       body: ListView(children: [
         Container(
-          padding: EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 20),
+          padding: const EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 20),
           child: Column(
             children: [
               Container(

@@ -23,5 +23,6 @@ class ManagerRoutes {
   static const Payment = "/Payment";
   // Categories
   static const Categories = "/Categories";
+  static const ContacUs = "/ContacUs";
 
 }

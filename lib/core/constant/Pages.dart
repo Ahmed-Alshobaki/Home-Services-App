@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../../view/ Contact/ContactUs.dart';
 import '../../view/Auth/ForgetPassword/ForgetPassword.dart';
 import '../../view/Auth/ResetPassword/reset_password.dart';
 import '../../view/Auth/SingUp/singup.dart';
@@ -41,6 +42,7 @@ class Pages {
 
     GetPage(name: ManagerRoutes.Categories, page: () => Categories()),
     GetPage(name: ManagerRoutes.History, page: () => History()),
+    GetPage(name: ManagerRoutes.ContacUs, page: () => ContacUs()),
 
   ];
 
