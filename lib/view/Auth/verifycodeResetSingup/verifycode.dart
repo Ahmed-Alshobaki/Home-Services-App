@@ -28,13 +28,13 @@ class VerifyCodeSingup extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
             Text((ManagerStrings.Otp.tr),
@@ -50,7 +50,7 @@ class VerifyCodeSingup extends StatelessWidget {
             ),
             Container(
               height: 55,
-              margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
+              margin: const EdgeInsetsDirectional.symmetric(horizontal: 30),
               child: Text((ManagerStrings.Otptital.tr),
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -61,10 +61,10 @@ class VerifyCodeSingup extends StatelessWidget {
                   )),
             ),
             Container(
-              margin: EdgeInsetsDirectional.only(bottom: 25, top: 35),
+              margin: const EdgeInsetsDirectional.only(bottom: 25, top: 35),
               child: OtpTextField(
                 focusedBorderColor: ManagerColors.green,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     fontSize: ManagerFontSizes.s20,
                     fontFamily: ManagerFont.quicksand),
                 showCursor: true,

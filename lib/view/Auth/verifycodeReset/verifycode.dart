@@ -27,13 +27,13 @@ class VerifyCode extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
             Text((ManagerStrings.Otp.tr),
@@ -49,7 +49,7 @@ class VerifyCode extends StatelessWidget {
             ),
             Container(
               height: 55,
-              margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
+              margin: const EdgeInsetsDirectional.symmetric(horizontal: 30),
               child: Text((ManagerStrings.Otptital.tr),
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -60,7 +60,7 @@ class VerifyCode extends StatelessWidget {
                   )),
             ),
             Container(
-              margin: EdgeInsetsDirectional.only(bottom: 25, top: 35),
+              margin: const EdgeInsetsDirectional.only(bottom: 25, top: 35),
               child: OtpTextField(
                 focusedBorderColor: ManagerColors.green,
                 textStyle: const TextStyle(
@@ -71,7 +71,7 @@ class VerifyCode extends StatelessWidget {
                 numberOfFields: 5,
                 fillColor: ManagerColors.greenfath,
                 filled: true,
-                borderColor: Color(0xff5FD068),
+                borderColor: const Color(0xff5FD068),
                 autoFocus: false,
                 showFieldAsBox: true,
 

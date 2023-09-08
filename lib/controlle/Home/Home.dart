@@ -28,17 +28,17 @@ class HomeControlle extends GetxController{
 
   gotopag(){
     if(visit==3){
-      Get.offNamed(ManagerRoutes.Profile);
+      Get.toNamed(ManagerRoutes.Profile);
       update();
       visit=0;
     }
     if(visit==2){
-     Get.offNamed(ManagerRoutes.Categories);
+     Get.toNamed(ManagerRoutes.Categories);
       update();
       visit=0;
     }
     if(visit==1){
-      Get.offNamed(ManagerRoutes.History);
+      Get.toNamed(ManagerRoutes.History);
       update();
       visit=0;
     }

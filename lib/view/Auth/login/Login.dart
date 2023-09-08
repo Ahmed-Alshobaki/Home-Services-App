@@ -44,11 +44,11 @@ class Login extends StatelessWidget {
         },
         child: Container(
           padding:
-              EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
+              const EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 20),
           child: Form(
             key: LoginControlle.globalKey,
             child: ListView(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: false,
               children: [
                 Text((ManagerStrings.Login.tr),
@@ -64,7 +64,7 @@ class Login extends StatelessWidget {
                 ),
                 Container(
                   height: 55,
-                  margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
+                  margin: const EdgeInsetsDirectional.symmetric(horizontal: 30),
                   child: Text((ManagerStrings.Phone_and_password.tr),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
@@ -85,7 +85,7 @@ class Login extends StatelessWidget {
                   },
                   tital: ManagerStrings.Email,
                   hint: ManagerStrings.EnterYourEmail.tr,
-                  Iconn: Icon(Icons.email_outlined),
+                  Iconn: const Icon(Icons.email_outlined),
                   obscureText: false,
                 ),
                 const SizedBox(
@@ -108,14 +108,14 @@ class Login extends StatelessWidget {
                           controller.cheng();
                         },
                         icon: controller.obscureText
-                            ? Icon(Icons.visibility_off_outlined)
-                            : Icon(Icons.remove_red_eye_outlined),
+                            ? const Icon(Icons.visibility_off_outlined)
+                            : const Icon(Icons.remove_red_eye_outlined),
                       ),
                     );
                   },
                 ),
                 Container(
-                    margin: EdgeInsetsDirectional.only(top: 15),
+                    margin: const EdgeInsetsDirectional.only(top: 15),
                     child: InkWell(
                       onTap: () {
                         LoginControlle.gotoForgetPasswordpage();
@@ -142,7 +142,7 @@ class Login extends StatelessWidget {
                     child: Text(
                       ManagerStrings.OR.tr,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontFamily: ManagerFont.quicksand),
+                      style: const TextStyle(fontFamily: ManagerFont.quicksand),
                     )),
                 const SizedBox(
                   height: 18,
@@ -161,10 +161,10 @@ class Login extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
+                        const SizedBox(
                             height: 32,
                             width: 32,
-                            child: const Image(
+                            child: Image(
                               image: AssetImage(ManagerAssets.Facebook),
                               filterQuality: FilterQuality.high,
                             )),
@@ -199,10 +199,10 @@ class Login extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
+                        const SizedBox(
                             height: 32,
                             width: 32,
-                            child: const Image(
+                            child: Image(
                               image: AssetImage(ManagerAssets.Google),
                               filterQuality: FilterQuality.high,
                             )),

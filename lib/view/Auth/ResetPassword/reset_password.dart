@@ -30,13 +30,13 @@ class ResetPassword extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
             Text((ManagerStrings.Reset_Password.tr),
@@ -52,7 +52,7 @@ class ResetPassword extends StatelessWidget {
             ),
             Container(
               height: 55,
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 40),
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 40),
               child: Text((ManagerStrings.Create_new_password.tr),
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -81,8 +81,8 @@ class ResetPassword extends StatelessWidget {
                       controller.cheng();
                     },
                     icon: controller.obscureText
-                        ? Icon(Icons.visibility_off_outlined)
-                        : Icon(Icons.remove_red_eye_outlined),
+                        ? const Icon(Icons.visibility_off_outlined)
+                        : const Icon(Icons.remove_red_eye_outlined),
                   ),
                 );
               },
@@ -106,8 +106,8 @@ class ResetPassword extends StatelessWidget {
                       controller.cheng();
                     },
                     icon: controller.obscureText
-                        ? Icon(Icons.visibility_off_outlined)
-                        : Icon(Icons.remove_red_eye_outlined),
+                        ? const Icon(Icons.visibility_off_outlined)
+                        : const Icon(Icons.remove_red_eye_outlined),
                   ),
                 );
               },

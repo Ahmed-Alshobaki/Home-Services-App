@@ -118,7 +118,7 @@ class Home extends StatelessWidget {
                           ...List.generate(
                                       3,
                                 (index) => Container(
-                              margin: EdgeInsetsDirectional.only(start: 5),
+                              margin: const EdgeInsetsDirectional.only(start: 5),
                               width: 8,
                               height: 8,
                               decoration: BoxDecoration(
@@ -142,7 +142,7 @@ class Home extends StatelessWidget {
                           fontFamily: ManagerFont.quicksand,
                           color: ManagerColors.black),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     InkWell(
                       onTap: (){
                         Get.offNamed(ManagerRoutes.Categories);
@@ -162,8 +162,7 @@ class Home extends StatelessWidget {
                   height: 15,
                 ),
 
-                Container(
-
+                SizedBox(
                     height: 330,
                     width: double.infinity,
                     child: ListView(
@@ -173,12 +172,12 @@ class Home extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Expanded(
-                                    child: Container(
+                                const Expanded(
+                                    child: SizedBox(
 
                                   height: 200,
                                   width: double.infinity,
-                                  child: const Card(
+                                  child: Card(
                                       child: Column(
                                     children: [
                                       Expanded(
@@ -224,64 +223,61 @@ class Home extends StatelessWidget {
                                 )),
                               ],
                             ),
-                            Container(
+                            Row(
 
-                              child: Row(
-
-                                children: [
-                                  Expanded(
-                                      child: Container(
-                                    height: 200,
-                                    width: double.infinity,
-                                    child: const Card(
-                                        child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/home/Group2.png")),
-                                        ),
-                                        Text(
-                                          "car wash",
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontFamily: ManagerFont.quicksand),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                      ],
-                                    )),
+                              children: [
+                                Expanded(
+                                    child: Container(
+                                  height: 200,
+                                  width: double.infinity,
+                                  child: const Card(
+                                      child: Column(
+                                    children: [
+                                      Expanded(
+                                        child: Image(
+                                            image: AssetImage(
+                                                "assets/home/Group2.png")),
+                                      ),
+                                      Text(
+                                        "car wash",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontFamily: ManagerFont.quicksand),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                    ],
                                   )),
-                                  Expanded(
-                                      child: Container(
-                                        margin: const EdgeInsetsDirectional.symmetric(
-                                            vertical: 10),
-                                    height: 200,
-                                    width: double.infinity,
-                                    child: const Card(
-                                        child: Column(
-                                      children: [
-                                        Expanded(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/home/Group4a.png")),
-                                        ),
-                                        Text(
-                                          "electrical",
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontFamily: ManagerFont.quicksand),
-                                        ),
-                                        SizedBox(
-                                          height: 15,
-                                        ),
-                                      ],
-                                    )),
+                                )),
+                                Expanded(
+                                    child: Container(
+                                      margin: const EdgeInsetsDirectional.symmetric(
+                                          vertical: 10),
+                                  height: 200,
+                                  width: double.infinity,
+                                  child: const Card(
+                                      child: Column(
+                                    children: [
+                                      Expanded(
+                                        child: Image(
+                                            image: AssetImage(
+                                                "assets/home/Group4a.png")),
+                                      ),
+                                      Text(
+                                        "electrical",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontFamily: ManagerFont.quicksand),
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                    ],
                                   )),
+                                )),
 
-                                ],
-                              ),
+                              ],
                             ),
 
                           ],

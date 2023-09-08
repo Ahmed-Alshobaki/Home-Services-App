@@ -13,7 +13,7 @@ import '../../view/Home/Home.dart';
 import '../../view/profile/Payment.dart';
 import '../../view/profile/editprofile.dart';
 import '../../view/profile/profile.dart';
-import '../../view/Home/shop.dart';
+import '../../view/Home/Categories.dart';
 import '../../view/welcome page/language/language.dart';
 import '../../view/welcome page/onboarding1/onboarding1.dart';
 import '../../view/welcome page/splash/splash.dart';

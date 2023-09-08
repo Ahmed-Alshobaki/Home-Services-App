@@ -45,8 +45,8 @@ class SingUp extends StatelessWidget {
           key: SingUpControllerr.key,
           child: ListView(
             padding:
-                EdgeInsetsDirectional.symmetric(vertical: 80, horizontal: 20),
-            physics: NeverScrollableScrollPhysics(),
+                const EdgeInsetsDirectional.symmetric(vertical: 80, horizontal: 20),
+            physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: false,
             children: [
               Text((ManagerStrings.Register.tr),
@@ -62,7 +62,7 @@ class SingUp extends StatelessWidget {
               ),
               Container(
                 height: 55,
-                margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
+                margin: const EdgeInsetsDirectional.symmetric(horizontal: 30),
                 child: Text((ManagerStrings.Phone_and_password.tr),
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -82,7 +82,7 @@ class SingUp extends StatelessWidget {
                 },
                 tital: ManagerStrings.FullName,
                 hint: ManagerStrings.EnterYourFullName.tr,
-                Iconn: Icon(Icons.person_outline),
+                Iconn: const Icon(Icons.person_outline),
                 obscureText: false,
               ),
               const SizedBox(
@@ -95,7 +95,7 @@ class SingUp extends StatelessWidget {
                 },
                 tital: ManagerStrings.Email,
                 hint: ManagerStrings.EnterYourEmail.tr,
-                Iconn: Icon(Icons.email_outlined),
+                Iconn: const Icon(Icons.email_outlined),
                 obscureText: false,
               ),
               const SizedBox(
@@ -117,8 +117,8 @@ class SingUp extends StatelessWidget {
                         controller.cheng();
                       },
                       icon: controller.obscureText
-                          ? Icon(Icons.visibility_off_outlined)
-                          : Icon(Icons.remove_red_eye_outlined),
+                          ? const Icon(Icons.visibility_off_outlined)
+                          : const Icon(Icons.remove_red_eye_outlined),
                     ),
                   );
                 },
@@ -127,7 +127,7 @@ class SingUp extends StatelessWidget {
                 init: SingUpController(),
                 builder: (controller) {
                   return Container(
-                      margin: EdgeInsetsDirectional.only(top: 15),
+                      margin: const EdgeInsetsDirectional.only(top: 15),
                       child: InkWell(
                         onTap: () {
                           SingUpControllerr.gotoForgetPasswordpage();
@@ -158,7 +158,7 @@ class SingUp extends StatelessWidget {
                   child: Text(
                     ManagerStrings.OR.tr,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontFamily: ManagerFont.quicksand),
+                    style: const TextStyle(fontFamily: ManagerFont.quicksand),
                   )),
               const SizedBox(
                 height: 15,
@@ -178,10 +178,10 @@ class SingUp extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      const SizedBox(
                           height: 32,
                           width: 32,
-                          child: const Image(
+                          child: Image(
                             image: AssetImage(ManagerAssets.Facebook),
                             filterQuality: FilterQuality.high,
                           )),
@@ -216,10 +216,10 @@ class SingUp extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      const SizedBox(
                           height: 32,
                           width: 32,
-                          child: const Image(
+                          child: Image(
                             image: AssetImage(ManagerAssets.Google),
                             filterQuality: FilterQuality.high,
                           )),

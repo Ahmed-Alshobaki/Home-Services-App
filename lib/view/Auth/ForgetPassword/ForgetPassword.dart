@@ -3,16 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop/core/resources/manager_routes.dart';
-
 import '../../../Localizations/welcome page/locale/locale.dart';
-import '../../../Localizations/welcome page/onboarding1/Translations1.dart';
-import '../../../controlle/Login/Login.dart';
 import '../../../controlle/forgetpassword/forgetpassword.dart';
 import '../../../core/functions/validator.dart';
-import '../../../core/resources/manager_assets.dart';
 import '../../../core/resources/manager_colors.dart';
 import '../../../core/resources/manager_font_sizes.dart';
-import '../../../core/resources/manager_fonts.dart';
 import '../../../core/resources/manager_strings.dart';
 import '../../widget/Buttom/Buttomprimary.dart';
 import '../../widget/Dialog/Dialog.dart';
@@ -33,13 +28,13 @@ class ForgetPassword extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 30, horizontal: 20),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: false,
           children: [
             Text((ManagerStrings.Forget2.tr),
@@ -55,7 +50,7 @@ class ForgetPassword extends StatelessWidget {
             ),
             Container(
               height: 55,
-              margin: EdgeInsetsDirectional.symmetric(horizontal: 30),
+              margin: const EdgeInsetsDirectional.symmetric(horizontal: 30),
               child: Text((ManagerStrings.Phone_and_password.tr),
                   textAlign: TextAlign.center,
                   style: TextStyle(
