@@ -18,7 +18,7 @@ class TextFormFieldcustom extends StatelessWidget {
 
   TextFormFieldcustom(
 
-      {required this.tital,
+      {super.key, required this.tital,
       required this.hint,
         required this.Iconn,
       required this.obscureText,

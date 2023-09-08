@@ -38,7 +38,7 @@ class ButtomPrimary extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           child: Text(
             tital.tr,
-            style: TextStyle(
+            style: const TextStyle(
                 fontFamily: ManagerFont.quicksand,
                 color: ManagerColors.white,
                 fontSize: ManagerFontSizes.s19),

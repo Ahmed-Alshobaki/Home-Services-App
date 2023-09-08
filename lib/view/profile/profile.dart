@@ -20,7 +20,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9FFF7),
+      backgroundColor: const Color(0xffF9FFF7),
       //F9FFF7
       appBar: AppBar(
         elevation: 0,
@@ -36,7 +36,7 @@ class Profile extends StatelessWidget {
           onPressed: () {
             Get.back();
           },
-          icon: Icon(Icons.arrow_back_ios_new),
+          icon: const Icon(Icons.arrow_back_ios_new),
         ),
       ),
       bottomNavigationBar: BottomBarFloatinn(
@@ -49,7 +49,7 @@ class Profile extends StatelessWidget {
         itemss: BottomBarFloatinn.items,
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 20),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 20),
         child : SingleChildScrollView(
           child: Column(
             children: [
@@ -63,8 +63,8 @@ class Profile extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                        margin: EdgeInsetsDirectional.only(top: 8),
-                        child: Image(
+                        margin: const EdgeInsetsDirectional.only(top: 8),
+                        child: const Image(
                             image: AssetImage("assets/profile/profile.png"))),
                     const SizedBox(
                       height: 15,
@@ -85,11 +85,11 @@ class Profile extends StatelessWidget {
                       onPressed: () {
                         profilecontroller.gotoedit();
                       },
-                      child: Text("edit"),
                       color: ManagerColors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      child: const Text("edit"),
                     )
                   ],
                 ),
@@ -111,7 +111,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.64,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -119,15 +119,15 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                     Positioned(
                                       left: 3.81,
@@ -143,12 +143,12 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 344.07,
                       top: 24,
                       child: Opacity(
                         opacity: 0.84,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -156,7 +156,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
@@ -164,7 +164,7 @@ class Profile extends StatelessWidget {
                                     Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                   ],
                                 ),
@@ -213,12 +213,10 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                         right: 10,
                         top: 25,
-                        child: Container(
-                          child: Icon(Icons.arrow_forward_ios_rounded),
-                        ))
+                        child: Icon(Icons.arrow_forward_ios_rounded))
                   ],
                 ),
               ),
@@ -239,7 +237,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.64,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -247,15 +245,15 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                     Positioned(
                                       left: 3.81,
@@ -271,12 +269,12 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 344.07,
                       top: 24,
                       child: Opacity(
                         opacity: 0.84,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -284,7 +282,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
@@ -292,7 +290,7 @@ class Profile extends StatelessWidget {
                                     Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                   ],
                                 ),
@@ -341,12 +339,10 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                         right: 10,
                         top: 25,
-                        child: Container(
-                          child: Icon(Icons.arrow_forward_ios_rounded),
-                        ))
+                        child: Icon(Icons.arrow_forward_ios_rounded))
                   ],
                 ),
               ),
@@ -367,7 +363,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.64,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -375,15 +371,15 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                     Positioned(
                                       left: 3.81,
@@ -399,12 +395,12 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 344.07,
                       top: 24,
                       child: Opacity(
                         opacity: 0.84,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -412,7 +408,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
@@ -420,7 +416,7 @@ class Profile extends StatelessWidget {
                                     Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                   ],
                                 ),
@@ -501,7 +497,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.64,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -509,15 +505,15 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                     Positioned(
                                       left: 3.81,
@@ -533,7 +529,7 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 344.07,
                       top: 24,
                       child: Opacity(
@@ -546,7 +542,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
@@ -554,7 +550,7 @@ class Profile extends StatelessWidget {
                                     Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                   ],
                                 ),
@@ -602,7 +598,7 @@ class Profile extends StatelessWidget {
                         right: 10,
                         top: 25,
                         child: Container(
-                          child: Icon(Icons.arrow_forward_ios_rounded),
+                          child: const Icon(Icons.arrow_forward_ios_rounded),
                         ))
                   ],
                 ),
@@ -624,7 +620,7 @@ class Profile extends StatelessWidget {
                       top: 24,
                       child: Opacity(
                         opacity: 0.64,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -632,15 +628,15 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
                                   children: [
-                                    Positioned(
+                                    const Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                     Positioned(
                                       left: 3.81,
@@ -656,12 +652,12 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 344.07,
                       top: 24,
                       child: Opacity(
                         opacity: 0.84,
-                        child: Container(
+                        child: SizedBox(
                           width: 24.93,
                           height: 24,
                           child: Row(
@@ -669,7 +665,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: 24.93,
                                 height: 24,
                                 child: Stack(
@@ -677,7 +673,7 @@ class Profile extends StatelessWidget {
                                     Positioned(
                                       left: 0,
                                       top: 0,
-                                      child: Container(width: 24.93, height: 24),
+                                      child: SizedBox(width: 24.93, height: 24),
                                     ),
                                   ],
                                 ),
@@ -717,7 +713,7 @@ class Profile extends StatelessWidget {
                         right: 10,
                         top: 25,
                         child: Container(
-                          child: Icon(Icons.arrow_forward_ios_rounded),
+                          child: const Icon(Icons.arrow_forward_ios_rounded),
                         ))
                   ],
                 ),

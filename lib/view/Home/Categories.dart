@@ -14,7 +14,7 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9FFF6),
+      backgroundColor: const Color(0xffF9FFF6),
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
@@ -34,20 +34,18 @@ class Categories extends StatelessWidget {
       ),
       bottomNavigationBar: GetBuilder<ShopController>(
         builder: (controller) {
-          return Container(
-            child: BottomBarFloatinn(
-              indexSelected: shopController.visit,
-              onTap: (i) {
-                shopController.getdata(i);
-                shopController.gotopag();
-              },
-              itemss: BottomBarFloatinn.items,
-            ),
+          return BottomBarFloatinn(
+            indexSelected: shopController.visit,
+            onTap: (i) {
+              shopController.getdata(i);
+              shopController.gotopag();
+            },
+            itemss: BottomBarFloatinn.items,
           );
         },
       ),
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 15,horizontal: 10),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 15,horizontal: 10),
           height: double.infinity,
           width: double.infinity,
           child: ListView(
@@ -82,11 +80,11 @@ class Categories extends StatelessWidget {
                                   ],
                                 )),
                           )),
-                      Expanded(
-                          child: Container(
+                      const Expanded(
+                          child: SizedBox(
                             height: 190,
                             width: double.infinity,
-                            child: const Card(
+                            child: Card(
                                 child: Column(
                                   children: [
                                     Expanded(
@@ -108,14 +106,14 @@ class Categories extends StatelessWidget {
                           )),
                     ],
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
-                          child: Container(
+                          child: SizedBox(
 
                             height: 190,
                             width: double.infinity,
-                            child: const Card(
+                            child: Card(
                                 child: Column(
                                   children: [
                                     Expanded(
@@ -136,10 +134,10 @@ class Categories extends StatelessWidget {
                                 )),
                           )),
                       Expanded(
-                          child: Container(
+                          child: SizedBox(
                             height: 190,
                             width: double.infinity,
-                            child: const Card(
+                            child: Card(
                                 child: Column(
                                   children: [
                                     Expanded(
@@ -161,14 +159,14 @@ class Categories extends StatelessWidget {
                           )),
                     ],
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Expanded(
-                          child: Container(
+                          child: SizedBox(
 
                             height: 190,
                             width: double.infinity,
-                            child: const Card(
+                            child: Card(
                                 child: Column(
                                   children: [
                                     Expanded(
@@ -189,10 +187,10 @@ class Categories extends StatelessWidget {
                                 )),
                           )),
                       Expanded(
-                          child: Container(
+                          child: SizedBox(
                             height: 190,
                             width: double.infinity,
-                            child: const Card(
+                            child: Card(
                                 child: Column(
                                   children: [
                                     Expanded(

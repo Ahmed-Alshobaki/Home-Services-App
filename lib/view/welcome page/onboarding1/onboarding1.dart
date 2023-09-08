@@ -35,12 +35,12 @@ class OnBoarding1 extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
         body: Container(
-      padding: EdgeInsetsDirectional.all(ManagerFontSizes.s15),
+      padding: const EdgeInsetsDirectional.all(ManagerFontSizes.s15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsetsDirectional.only(top: 50),
+            margin: const EdgeInsetsDirectional.only(top: 50),
             alignment: AlignmentDirectional.topEnd,
             child: InkWell(
                 onTap: () {

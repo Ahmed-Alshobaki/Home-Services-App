@@ -23,7 +23,7 @@ class LanguageApp extends StatelessWidget {
     String lang1 = Translationsz1.getlanguage(Get.deviceLocale!.languageCode);
     return Scaffold(
       body: Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 45, horizontal: 16),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 45, horizontal: 16),
         child: ListView(
           children: [
             Column(
@@ -31,7 +31,7 @@ class LanguageApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsetsDirectional.only(top: 10),
+                  margin: const EdgeInsetsDirectional.only(top: 10),
                   height: 139,
                   width: 139,
                   child: Image.asset("assets/LanguageApp/Group.png"),
@@ -39,8 +39,8 @@ class LanguageApp extends StatelessWidget {
                 Wrap(
                   children: [
                     Container(
-                      padding: EdgeInsetsDirectional.symmetric(horizontal: 10),
-                      margin: EdgeInsetsDirectional.only(top: 20),
+                      padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
+                      margin: const EdgeInsetsDirectional.only(top: 20),
                       child: Text((ManagerStrings.Findyourhomeservic.tr),
                           style: TextStyle(
                               color: ManagerColors.black,
@@ -51,7 +51,7 @@ class LanguageApp extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsetsDirectional.only(top: 20),
+                  margin: const EdgeInsetsDirectional.only(top: 20),
                   child: Text((ManagerStrings.selectlanguage.tr),
                       textAlign: TextAlign.left,
                       style: TextStyle(
@@ -122,7 +122,7 @@ class LanguageApp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsetsDirectional.only(start: 0, top: 10),
+                      margin: const EdgeInsetsDirectional.only(start: 0, top: 10),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -147,7 +147,7 @@ class LanguageApp extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsetsDirectional.only(start: 50),
+                      margin: const EdgeInsetsDirectional.only(start: 50),
                       child: Text((ManagerStrings.Term_and_Conditions.tr),
                           style: TextStyle(
                               fontWeight: FontWeight.w800,

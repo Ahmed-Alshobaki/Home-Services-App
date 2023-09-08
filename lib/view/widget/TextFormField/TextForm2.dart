@@ -17,7 +17,7 @@ class TextFormFieldcustom2 extends StatelessWidget {
   String? Function(String?)? validator;
 
   TextFormFieldcustom2(
-      {required this.tital,
+      {super.key, required this.tital,
         required this.hint,
         required this.obscureText,
         required this.validator,

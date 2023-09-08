@@ -32,7 +32,7 @@ class Editprofile extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(Icons.arrow_back_ios_new),
+            icon: const Icon(Icons.arrow_back_ios_new),
           ),
         ),
       body: ListView(children: [
@@ -78,7 +78,7 @@ class Editprofile extends StatelessWidget {
                     Iconn: Icon(Icons.person_outline),
                     obscureText: false,
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   TextFormFieldcustom(
                     controller: editProfileController.email,
                     validator: (val) {
@@ -86,10 +86,10 @@ class Editprofile extends StatelessWidget {
                     },
                     tital: ManagerStrings.Email,
                     hint: ManagerStrings.EnterYourEmail.tr,
-                    Iconn: Icon(Icons.email_outlined),
+                    Iconn: const Icon(Icons.email_outlined),
                     obscureText: false,
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   GetBuilder<EditProfileController>(
 
                     builder: (controller) {
@@ -106,19 +106,19 @@ class Editprofile extends StatelessWidget {
                             controller.cheng();
                           },
                           icon: controller.obscureText
-                              ? Icon(Icons.visibility_off_outlined)
-                              : Icon(Icons.remove_red_eye_outlined),
+                              ? const Icon(Icons.visibility_off_outlined)
+                              : const Icon(Icons.remove_red_eye_outlined),
                         ),
                       );
                     },
                   ),
                   ButtomPrimary(tital: 'Save Changes',onPressed: (){},mtop: 45,),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
                   Container(
                     height:50 ,
                     width: 150,
                     decoration: BoxDecoration(
-                      color: Color(0x1AFF0000),
+                      color: const Color(0x1AFF0000),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: const Row(
